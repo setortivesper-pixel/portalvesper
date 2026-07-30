@@ -474,3 +474,170 @@ body{
     font-size:18px;
 
 }
+/* ====== TABELA DE CONTATOS ====== */
+
+.tabela-contatos{
+    margin-top: 30px;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.08);
+    overflow-x: auto;
+    border: 1px solid #ececec;
+}
+
+.cabecalho-tabela{
+    padding: 18px 24px;
+    border-bottom: 1px solid #ececec;
+}
+
+.cabecalho-tabela h3{
+    margin: 0;
+    font-size: 18px;
+    color: #1f2937;
+}
+
+table{
+    width: 100%;
+    min-width: 1100px;
+    border-collapse: collapse;
+}
+
+thead{
+    background: #f8fafc;
+}
+
+th{
+    text-align: left;
+    padding: 15px 20px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #6b7280;
+    text-transform: uppercase;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+td{
+    padding: 16px 20px;
+    font-size: 14px;
+    color: #374151;
+    border-bottom: 1px solid #f1f1f1;
+    vertical-align: middle;
+}
+
+tbody tr{
+    transition: .2s;
+}
+
+tbody tr:hover{
+    background: #f9fafb;
+}
+
+/* ====== Nome ====== */
+
+td strong{
+    display: block;
+    color: #111827;
+    font-size: 15px;
+    margin-bottom: 4px;
+}
+
+td small{
+    color: #6b7280;
+    font-size: 12px;
+}
+
+/* ====== Garagem ====== */
+
+td:nth-child(2){
+    font-weight: 500;
+    color: #1f2937;
+}
+
+/* ====== Badges ====== */
+
+.tag{
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.ti{
+    background: #dbeafe;
+    color: #2563eb;
+}
+
+.rh{
+    background: #dcfce7;
+    color: #15803d;
+}
+
+.financeiro{
+    background: #fef3c7;
+    color: #b45309;
+}
+
+.operacional{
+    background: #ede9fe;
+    color: #7c3aed;
+}
+
+.manutencao{
+    background: #ffe7d6;
+    color: #c2410c;
+}
+
+.administrativo{
+    background: #e0f2fe;
+    color: #0369a1;
+}
+
+/* ====== Botões ====== */
+
+.acoes{
+    white-space: nowrap;
+}
+
+.acoes button{
+    width: 34px;
+    height: 34px;
+    margin: 0 2px;
+    border: none;
+    border-radius: 8px;
+    background: #f3f4f6;
+    color: #4b5563;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.acoes button:hover{
+    background: #0d6efd;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+/* ====== Barra de rolagem ====== */
+
+.tabela-contatos::-webkit-scrollbar{
+    height: 8px;
+}
+
+.tabela-contatos::-webkit-scrollbar-thumb{
+    background: #cbd5e1;
+    border-radius: 20px;
+}
+
+.tabela-contatos::-webkit-scrollbar-track{
+    background: #f1f5f9;
+}
+
+/* ====== Responsivo ====== */
+
+@media (max-width: 900px){
+
+    table{
+        min-width: 950px;
+    }
+
+}
