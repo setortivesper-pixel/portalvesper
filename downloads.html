@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>GVSP - Downloads</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<!-- CSS geral do site (não alterado) -->
+<link rel="stylesheet" href="css/style.css">
+<!-- CSS novo, só desta página -->
+<link rel="stylesheet" href="css/downloads.css">
+</head>
+<body>
+
+<!-- ============ SIDEBAR (copiada exatamente do index.html, sem alterações) ============ -->
+<div class="sidebar">
+
+    <img src="img/GVSPLogo.png" class="logo">
+
+    <div class="menu">
+
+        <a href="index.html">
+        <i class="fa-solid fa-house menu-icon"></i>
+        Início
+        </a>
+
+        <a href="manuais.html">
+            <i class="fa-solid fa-book-open menu-icon"></i>
+            Manuais
+        </a>
+
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSf6FDbbCepjjwuYp5Xspb2bBjO5a2hNAEAKkRcPxEtlUfdWHg/viewform">
+            <i class="fa-solid fa-headset menu-icon"></i>
+            Abrir Chamado
+        </a>
+
+        <a href="downloads.html">
+            <i class="fa-solid fa-download menu-icon"></i>
+            Downloads
+        </a>
+
+        <a href="comunicados.html">
+            <i class="fa-solid fa-bullhorn menu-icon"></i>
+            Comunicados
+        </a>
+
+        <a href="contatos.html">
+            <i class="fa-solid fa-users menu-icon"></i>
+            Contatos
+        </a>
+
+    </div>
+
+    <div class="versao">
+    <p><strong>Versão 1.0.0</strong></p>
+    <p>© 2026 Vesper Transportes</p>
+    </div>
+
+</div>
+
+<!-- ============ CONTEÚDO ============ -->
+<div class="conteudo">
+
+    <div class="topo">
+        <input type="text" placeholder="Pesquisar manuais, sistemas, programas...">
+        <div class="usuario">👤 Cauan</div>
+    </div>
+
+    <div class="titulo-pagina">
+        <h1><i class="fa-solid fa-download"></i> Downloads</h1>
+        <p>Baixe manuais e programas de forma segura.</p>
+    </div>
+
+    <!-- ============ NOVA SEÇÃO: PROGRAMAS OFICIAIS ============ -->
+    <div class="programas-secao">
+
+        <div class="aviso-seguranca">
+            <div class="icone"><i class="fa-solid fa-shield-halved"></i></div>
+            <div>
+                <strong>Baixe sempre por aqui</strong>
+                <p>Os links abaixo levam direto ao site oficial de cada programa, evitando anúncios ou páginas falsas. Precisa de algo que não está na lista? Abra um chamado antes de baixar de outro lugar.</p>
+            </div>
+        </div>
+
+        <div class="titulo-secao">
+            <h2>Programas oficiais</h2>
+            <span>7 itens</span>
+        </div>
+
+        <div class="grid-programas">
+
+            <!-- AnyDesk: sem ícone no Font Awesome, mantém imagem com fallback -->
+            <a class="card-programa" href="https://anydesk.com/pt/downloads" target="_blank" rel="noopener">
+                <div class="icone-programa" style="background:#ef4136;">
+                    <img src="https://cdn.simpleicons.org/anydesk/ffffff" alt="AnyDesk" onerror="this.replaceWith(Object.assign(document.createElement('span'),{textContent:'AD'}))">
+                </div>
+                <h3>AnyDesk</h3>
+                <p>Acesso remoto para suporte do TI no seu computador.</p>
+                <div class="dominio">anydesk.com</div>
+                <span class="selo-verificado"><i class="fa-solid fa-circle-check"></i> Link oficial verificado</span>
+            </a>
+
+            <!-- Chrome: Font Awesome tem o ícone, zero dependência externa -->
+            <a class="card-programa" href="https://www.google.com/chrome/" target="_blank" rel="noopener">
+                <div class="icone-programa" style="background:#2563eb;">
+                    <i class="fa-brands fa-chrome" style="font-size:26px;"></i>
+                </div>
+                <h3>Google Chrome</h3>
+                <p>Navegador padrão homologado pela empresa.</p>
+                <div class="dominio">google.com/chrome</div>
+                <span class="selo-verificado"><i class="fa-solid fa-circle-check"></i> Link oficial verificado</span>
+            </a>
+
+            <a class="card-programa" href="https://www.mozilla.org/pt-BR/firefox/new/" target="_blank" rel="noopener">
+                <div class="icone-programa" style="background:#ff7139;">
+                    <i class="fa-brands fa-firefox-browser" style="font-size:26px;"></i>
+                </div>
+                <h3>Firefox</h3>
+                <p>Navegador alternativo homologado pela empresa.</p>
+                <div class="dominio">mozilla.org</div>
+                <span class="selo-verificado"><i class="fa-solid fa-circle-check"></i> Link oficial verificado</span>
+            </a>
+
+            <a class="card-programa" href="https://acrobat.adobe.com/br/pt/acrobat/pdf-reader.html" target="_blank" rel="noopener">
+                <div class="icone-programa" style="background:#ed2224;">
+                    <i class="fa-brands fa-adobe" style="font-size:26px;"></i>
+                </div>
+                <h3>Adobe Reader</h3>
+                <p>Leitor de arquivos PDF.</p>
+                <div class="dominio">adobe.com</div>
+                <span class="selo-verificado"><i class="fa-solid fa-circle-check"></i> Link oficial verificado</span>
+            </a>
+
+            <!-- Foxit: sem ícone no Font Awesome, mantém imagem com fallback -->
+            <a class="card-programa" href="https://www.foxit.com/pdf-reader/" target="_blank" rel="noopener">
+                <div class="icone-programa" style="background:#f36c21;">
+                    <img src="https://cdn.simpleicons.org/foxit/ffffff" alt="Foxit PDF Reader" onerror="this.replaceWith(Object.assign(document.createElement('span'),{textContent:'Fx'}))">
+                </div>
+                <h3>Foxit PDF Reader</h3>
+                <p>Leitor de PDF alternativo, mais leve.</p>
+                <div class="dominio">foxit.com</div>
+                <span class="selo-verificado"><i class="fa-solid fa-circle-check"></i> Link oficial verificado</span>
+            </a>
+
+            <!-- Spark: sem ícone no Font Awesome, mantém imagem com fallback -->
+            <a class="card-programa" href="https://sparkmailapp.com/download" target="_blank" rel="noopener">
+                <div class="icone-programa" style="background:#1a73e8;">
+                    <img src="https://cdn.simpleicons.org/readdle/ffffff" alt="Spark" onerror="this.replaceWith(Object.assign(document.createElement('span'),{textContent:'Sp'}))">
+                </div>
+                <h3>Spark</h3>
+                <p>Cliente de e-mail usado pela equipe.</p>
+                <div class="dominio">sparkmailapp.com</div>
+                <span class="selo-verificado"><i class="fa-solid fa-circle-check"></i> Link oficial verificado</span>
+            </a>
+
+            <a class="card-programa" href="https://www.whatsapp.com/download" target="_blank" rel="noopener">
+                <div class="icone-programa" style="background:#25d366;">
+                    <i class="fa-brands fa-whatsapp" style="font-size:26px;"></i>
+                </div>
+                <h3>WhatsApp</h3>
+                <p>Aplicativo de mensagens para computador.</p>
+                <div class="dominio">whatsapp.com</div>
+                <span class="selo-verificado"><i class="fa-solid fa-circle-check"></i> Link oficial verificado</span>
+            </a>
+
+        </div>
+
+        <p class="nota-rodape-programas">Precisa de um programa que não está nesta lista? Abra um chamado que o TI inclui aqui com o link oficial.</p>
+
+    </div>
+
+</div>
+
+</body>
+</html>
