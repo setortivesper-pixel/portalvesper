@@ -1,0 +1,141 @@
+/* ===========================================
+   PROGRAMAS OFICIAIS — seção nova da página Downloads
+   Arquivo isolado: não altera style.css.
+   Reaproveita a paleta existente (#2563eb, #12233f, sombras
+   e raios já usados no site) só que aplicada a um card
+   quadrado, no formato que você curtiu.
+=========================================== */
+
+.programas-secao{
+    margin-top:35px;
+    margin-bottom:35px;
+}
+
+.programas-secao .titulo-secao{
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    margin-bottom:20px;
+}
+
+.programas-secao .titulo-secao h2{
+    font-size:22px;
+    color:#1e293b;
+}
+
+.programas-secao .titulo-secao span{
+    color:#94a3b8;
+    font-size:14px;
+}
+
+.aviso-seguranca{
+    background:#eaf2ff;
+    border:1px solid #cfe1ff;
+    border-radius:15px;
+    padding:20px 25px;
+    display:flex;
+    gap:16px;
+    align-items:flex-start;
+    margin-bottom:30px;
+}
+
+.aviso-seguranca .icone{
+    font-size:26px;
+    color:#2563eb;
+    margin:0;
+}
+
+.aviso-seguranca strong{
+    display:block;
+    color:#1e293b;
+    font-size:15px;
+    margin-bottom:4px;
+}
+
+.aviso-seguranca p{
+    margin:0;
+    color:#4b5b73;
+    font-size:14px;
+    line-height:1.5;
+}
+
+.grid-programas{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(240px,1fr));
+    gap:22px;
+}
+
+.card-programa{
+    background:white;
+    border-radius:15px;
+    padding:25px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+    transition:.2s;
+    cursor:pointer;
+    text-decoration:none;
+    color:inherit;
+    display:block;
+}
+
+.card-programa:hover{
+    transform:translateY(-5px);
+    box-shadow:0 15px 30px rgba(0,0,0,.15);
+}
+
+.card-programa .icone-programa{
+    width:54px;
+    height:54px;
+    border-radius:14px; /* quadrado com cantos suaves, não círculo */
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    font-weight:bold;
+    font-size:15px;
+    margin-bottom:18px;
+    overflow:hidden;
+}
+
+/* imagens dos logos (quando usadas ao invés de <i> do Font Awesome) */
+.card-programa .icone-programa img{
+    width:28px;
+    height:28px;
+    object-fit:contain;
+}
+
+.card-programa h3{
+    font-size:18px;
+    color:#1e293b;
+    margin-bottom:10px;
+}
+
+.card-programa p{
+    color:#666;
+    font-size:14px;
+    line-height:1.5;
+    margin-bottom:14px;
+}
+
+.card-programa .dominio{
+    font-size:12.5px;
+    color:#94a3b8;
+    margin-bottom:14px;
+}
+
+.selo-verificado{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    font-size:12px;
+    font-weight:bold;
+    color:#16a34a;
+    background:#e9f9ee;
+    padding:6px 12px;
+    border-radius:20px;
+}
+
+.nota-rodape-programas{
+    color:#94a3b8;
+    font-size:13.5px;
+    margin-top:18px;
+}
