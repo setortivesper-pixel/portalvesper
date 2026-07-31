@@ -139,3 +139,6 @@
     font-size:13.5px;
     margin-top:18px;
 }
+
+.icone-programa.anydesk { background:#ef4136; }.icone-programa.chrome,.icone-programa.spark { background:#2563eb; }.icone-programa.firefox { background:#ff7139; }.icone-programa.adobe { background:#ed2224; }.icone-programa.foxit { background:#f36c21; }.icone-programa.whatsapp { background:#25d366; }
+.card-programa:focus-visible { outline:3px solid rgb(37 99 235 / .4); outline-offset:3px; }
