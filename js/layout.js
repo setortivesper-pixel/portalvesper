@@ -1,5 +1,5 @@
 const navigationItems = [
-  { href: "index.html", icon: "fa-house", label: "Início" },
+  { href: "index.html", icon: "fa-house", label: "In&iacute;cio" },
   { href: "manuais.html", icon: "fa-book-open", label: "Manuais" },
   {
     href: "https://docs.google.com/forms/d/e/1FAIpQLSf6FDbbCepjjwuYp5Xspb2bBjO5a2hNAEAKkRcPxEtlUfdWHg/viewform",
@@ -8,9 +8,8 @@ const navigationItems = [
     external: true,
   },
   { href: "downloads.html", icon: "fa-download", label: "Downloads" },
-  { href: "comunicados.html", icon: "fa-bullhorn", label: "Comunicados" },
   { href: "contatos.html", icon: "fa-users", label: "Contatos" },
-];
+ ];
 
 const sidebar = document.querySelector(".sidebar");
 
@@ -28,14 +27,14 @@ if (sidebar) {
     .join("");
 
   sidebar.innerHTML = `
-    <a class="brand" href="index.html" aria-label="Portal Vesper - início">
+    <a class="brand" href="index.html" aria-label="Portal Vesper - in&iacute;cio">
       <img src="img/GVSPLogo.png" class="logo" alt="Vesper Transportes">
     </a>
-    <nav class="menu" aria-label="Navegação principal">
+    <nav class="menu" aria-label="Navega&ccedil;&atilde;o principal">
       ${menuItems}
     </nav>
     <footer class="versao">
-      <p><strong>Versão 1.0.0</strong></p>
-      <p>© 2026 Vesper Transportes</p>
+      <p><strong>Vers&atilde;o 1.0.0</strong></p>
+      <p>&copy; 2026 Vesper Transportes</p>
     </footer>`;
 }

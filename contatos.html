@@ -1,4 +1,119 @@
 <!doctype html>
-<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Contatos | Portal Vesper</title><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"><link rel="stylesheet" href="css/style.css"></head><body>
-<aside class="sidebar" aria-label="Navegação principal"><a class="brand" href="index.html" aria-label="Portal Vesper - início"><img src="img/GVSPLogo.png" class="logo" alt="Vesper Transportes"></a><nav class="menu"><a href="index.html"><i class="fa-solid fa-house menu-icon"></i>Início</a><a href="manuais.html"><i class="fa-solid fa-book-open menu-icon"></i>Manuais</a><a href="https://docs.google.com/forms/d/e/1FAIpQLSf6FDbbCepjjwuYp5Xspb2bBjO5a2hNAEAKkRcPxEtlUfdWHg/viewform" target="_blank" rel="noopener"><i class="fa-solid fa-headset menu-icon"></i>Abrir chamado</a><a href="downloads.html"><i class="fa-solid fa-download menu-icon"></i>Downloads</a><a href="comunicados.html"><i class="fa-solid fa-bullhorn menu-icon"></i>Comunicados</a><a href="contatos.html"><i class="fa-solid fa-users menu-icon"></i>Contatos</a></nav><footer class="versao"><p><strong>Versão 1.0.0</strong></p><p>© 2026 Vesper Transportes</p></footer></aside>
-<main class="conteudo"><header class="topo"><input type="search" placeholder="Pesquisar por nome ou setor" disabled aria-label="Pesquisar contatos"><div class="usuario"><i class="fa-solid fa-user"></i> Cauan</div></header><section class="titulo-pagina"><h1><i class="fa-solid fa-address-book"></i> Contatos</h1><p>Encontre rapidamente as pessoas e setores da empresa.</p></section><div class="categorias"><button class="categoria ativa" type="button">Todos</button><button class="categoria" type="button">RH</button><button class="categoria" type="button">Financeiro</button><button class="categoria" type="button">TI</button><button class="categoria" type="button">Operacional</button><button class="categoria" type="button">Manutenção</button><button class="categoria" type="button">Administrativo</button></div><section class="tabela-contatos"><header class="cabecalho-tabela"><h2>Todos os contatos</h2></header><table><thead><tr><th>Nome</th><th>Garagem</th><th>Setor</th><th>Telefone</th><th><span class="visually-hidden">Ações</span></th></tr></thead><tbody><tr><td><strong>Cauan Signiglia</strong><small>Coordenador de TI</small></td><td>Vesper Jundiaí</td><td><span class="tag ti">TI</span></td><td>(11) 4598-8891</td><td class="acoes"><a href="tel:+551145988891" aria-label="Ligar para Cauan Signiglia"><i class="fa-solid fa-phone"></i></a></td></tr><tr><td><strong>Tiago Oliveira</strong><small>Analista de Sistemas</small></td><td>Transnetti Campinas</td><td><span class="tag ti">TI</span></td><td>(11) 4598-8892</td><td class="acoes"><a href="tel:+551145988892" aria-label="Ligar para Tiago Oliveira"><i class="fa-solid fa-phone"></i></a></td></tr><tr><td><strong>Bruna Stein</strong><small>Analista de RH</small></td><td>Vesper Limeira</td><td><span class="tag rh">RH</span></td><td>(11) 4598-8801</td><td class="acoes"><a href="tel:+551145988801" aria-label="Ligar para Bruna Stein"><i class="fa-solid fa-phone"></i></a></td></tr><tr><td><strong>Roseli Alves</strong><small>Assistente Financeiro</small></td><td>Vesper Americana</td><td><span class="tag financeiro">Financeiro</span></td><td>(11) 4598-8802</td><td class="acoes"><a href="tel:+551145988802" aria-label="Ligar para Roseli Alves"><i class="fa-solid fa-phone"></i></a></td></tr><tr><td><strong>João Martins</strong><small>Coordenador de Frota</small></td><td>Bybus Mogi</td><td><span class="tag operacional">Operacional</span></td><td>(11) 4598-8803</td><td class="acoes"><a href="tel:+551145988803" aria-label="Ligar para João Martins"><i class="fa-solid fa-phone"></i></a></td></tr><tr><td><strong>Carlos Mendes</strong><small>Técnico de Manutenção</small></td><td>Lima &amp; Silva Sumaré</td><td><span class="tag manutencao">Manutenção</span></td><td>(11) 4598-8804</td><td class="acoes"><a href="tel:+551145988804" aria-label="Ligar para Carlos Mendes"><i class="fa-solid fa-phone"></i></a></td></tr><tr><td><strong>Ana Pereira</strong><small>Assistente Administrativo</small></td><td>Vesper Atibaia</td><td><span class="tag administrativo">Administrativo</span></td><td>(11) 4598-8805</td><td class="acoes"><a href="tel:+551145988805" aria-label="Ligar para Ana Pereira"><i class="fa-solid fa-phone"></i></a></td></tr><tr><td><strong>Marcos Silva</strong><small>Supervisor Operacional</small></td><td>Transnetti Indaiatuba</td><td><span class="tag operacional">Operacional</span></td><td>(11) 4598-8806</td><td class="acoes"><a href="tel:+551145988806" aria-label="Ligar para Marcos Silva"><i class="fa-solid fa-phone"></i></a></td></tr></tbody></table></section></main><script src="js/layout.js"></script><script src="js/app.js"></script></body></html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contatos | Portal Vesper</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <aside class="sidebar" aria-label="Navegação principal"></aside>
+
+  <main class="conteudo">
+    <header class="topo">
+      <label class="visually-hidden" for="pesquisa-contatos">Pesquisar contatos</label>
+      <input id="pesquisa-contatos" type="search" placeholder="Pesquisar por nome ou setor" disabled>
+
+      <div class="usuario">
+        <i class="fa-solid fa-user" aria-hidden="true"></i>
+        Cauan
+      </div>
+    </header>
+
+    <section class="titulo-pagina">
+      <h1><i class="fa-solid fa-address-book" aria-hidden="true"></i> Contatos</h1>
+      <p>Encontre rapidamente as pessoas e setores da empresa.</p>
+    </section>
+
+    <nav class="categorias" aria-label="Categorias de contatos">
+      <button class="categoria ativa" type="button">Todos</button>
+      <button class="categoria" type="button">RH</button>
+      <button class="categoria" type="button">Financeiro</button>
+      <button class="categoria" type="button">TI</button>
+      <button class="categoria" type="button">Operacional</button>
+      <button class="categoria" type="button">Manutenção</button>
+      <button class="categoria" type="button">Administrativo</button>
+    </nav>
+
+    <section class="tabela-contatos" aria-labelledby="titulo-tabela-contatos">
+      <header class="cabecalho-tabela">
+        <h2 id="titulo-tabela-contatos">Todos os contatos</h2>
+      </header>
+
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Nome</th>
+            <th scope="col">Garagem</th>
+            <th scope="col">Setor</th>
+            <th scope="col">Telefone</th>
+            <th scope="col"><span class="visually-hidden">Ações</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Cauan Signiglia</strong><small>Coordenador de TI</small></td>
+            <td>Vesper Jundiaí</td>
+            <td><span class="tag ti">TI</span></td>
+            <td>(11) 4598-8891</td>
+            <td class="acoes"><a href="tel:+551145988891" aria-label="Ligar para Cauan Signiglia"><i class="fa-solid fa-phone" aria-hidden="true"></i></a></td>
+          </tr>
+          <tr>
+            <td><strong>Tiago Oliveira</strong><small>Analista de Sistemas</small></td>
+            <td>Transnetti Campinas</td>
+            <td><span class="tag ti">TI</span></td>
+            <td>(11) 4598-8892</td>
+            <td class="acoes"><a href="tel:+551145988892" aria-label="Ligar para Tiago Oliveira"><i class="fa-solid fa-phone" aria-hidden="true"></i></a></td>
+          </tr>
+          <tr>
+            <td><strong>Bruna Stein</strong><small>Analista de RH</small></td>
+            <td>Vesper Limeira</td>
+            <td><span class="tag rh">RH</span></td>
+            <td>(11) 4598-8801</td>
+            <td class="acoes"><a href="tel:+551145988801" aria-label="Ligar para Bruna Stein"><i class="fa-solid fa-phone" aria-hidden="true"></i></a></td>
+          </tr>
+          <tr>
+            <td><strong>Roseli Alves</strong><small>Assistente Financeiro</small></td>
+            <td>Vesper Americana</td>
+            <td><span class="tag financeiro">Financeiro</span></td>
+            <td>(11) 4598-8802</td>
+            <td class="acoes"><a href="tel:+551145988802" aria-label="Ligar para Roseli Alves"><i class="fa-solid fa-phone" aria-hidden="true"></i></a></td>
+          </tr>
+          <tr>
+            <td><strong>João Martins</strong><small>Coordenador de Frota</small></td>
+            <td>Bybus Mogi</td>
+            <td><span class="tag operacional">Operacional</span></td>
+            <td>(11) 4598-8803</td>
+            <td class="acoes"><a href="tel:+551145988803" aria-label="Ligar para João Martins"><i class="fa-solid fa-phone" aria-hidden="true"></i></a></td>
+          </tr>
+          <tr>
+            <td><strong>Carlos Mendes</strong><small>Técnico de Manutenção</small></td>
+            <td>Lima &amp; Silva Sumaré</td>
+            <td><span class="tag manutencao">Manutenção</span></td>
+            <td>(11) 4598-8804</td>
+            <td class="acoes"><a href="tel:+551145988804" aria-label="Ligar para Carlos Mendes"><i class="fa-solid fa-phone" aria-hidden="true"></i></a></td>
+          </tr>
+          <tr>
+            <td><strong>Ana Pereira</strong><small>Assistente Administrativo</small></td>
+            <td>Vesper Atibaia</td>
+            <td><span class="tag administrativo">Administrativo</span></td>
+            <td>(11) 4598-8805</td>
+            <td class="acoes"><a href="tel:+551145988805" aria-label="Ligar para Ana Pereira"><i class="fa-solid fa-phone" aria-hidden="true"></i></a></td>
+          </tr>
+          <tr>
+            <td><strong>Marcos Silva</strong><small>Supervisor Operacional</small></td>
+            <td>Transnetti Indaiatuba</td>
+            <td><span class="tag operacional">Operacional</span></td>
+            <td>(11) 4598-8806</td>
+            <td class="acoes"><a href="tel:+551145988806" aria-label="Ligar para Marcos Silva"><i class="fa-solid fa-phone" aria-hidden="true"></i></a></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="js/layout.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

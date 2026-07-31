@@ -1,12 +1,65 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Manuais | Portal Vesper</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"><link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <aside class="sidebar" aria-label="Navegação principal"><a class="brand" href="index.html" aria-label="Portal Vesper - início"><img src="img/GVSPLogo.png" class="logo" alt="Vesper Transportes"></a><nav class="menu"><a href="index.html"><i class="fa-solid fa-house menu-icon" aria-hidden="true"></i>Início</a><a href="manuais.html"><i class="fa-solid fa-book-open menu-icon" aria-hidden="true"></i>Manuais</a><a href="https://docs.google.com/forms/d/e/1FAIpQLSf6FDbbCepjjwuYp5Xspb2bBjO5a2hNAEAKkRcPxEtlUfdWHg/viewform" target="_blank" rel="noopener"><i class="fa-solid fa-headset menu-icon" aria-hidden="true"></i>Abrir chamado</a><a href="downloads.html"><i class="fa-solid fa-download menu-icon" aria-hidden="true"></i>Downloads</a><a href="comunicados.html"><i class="fa-solid fa-bullhorn menu-icon" aria-hidden="true"></i>Comunicados</a><a href="contatos.html"><i class="fa-solid fa-users menu-icon" aria-hidden="true"></i>Contatos</a></nav><footer class="versao"><p><strong>Versão 1.0.0</strong></p><p>© 2026 Vesper Transportes</p></footer></aside>
-  <main class="conteudo"><header class="topo"><label class="visually-hidden" for="pesquisa-manuais">Pesquisar manuais</label><input id="pesquisa-manuais" type="search" placeholder="Pesquisar manuais..."><div class="usuario"><i class="fa-solid fa-user" aria-hidden="true"></i> Cauan</div></header><section class="titulo-pagina"><h1><i class="fa-solid fa-book-open" aria-hidden="true"></i> Manuais</h1><p>Consulte os procedimentos internos da empresa.</p></section><div class="categorias" aria-label="Categorias de manuais"><button class="categoria ativa" type="button">Todos</button><button class="categoria" type="button">RH</button><button class="categoria" type="button">Financeiro</button><button class="categoria" type="button">TI</button><button class="categoria" type="button">Operacional</button></div><section class="lista-manuais" aria-label="Lista de manuais"><a class="manual" href="manuais/ti/FLW.pdf" target="_blank" rel="noopener"><span class="manual-icone"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i></span><span class="manual-info"><strong>Acesso remoto VPN</strong><span>Passo a passo para conectar na VPN da empresa.</span></span><span class="manual-categoria">TI</span><time class="manual-data" datetime="2026-07-20">20/07/2026</time><i class="fa-solid fa-chevron-right manual-seta" aria-hidden="true"></i></a><a class="manual" href="manuais/rh/ComoRealizarInclusaoColaboradores.pdf" target="_blank" rel="noopener"><span class="manual-icone"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i></span><span class="manual-info"><strong>Cadastro de funcionário no relógio de ponto</strong><span>Passo a passo para cadastro de funcionários com e sem digital.</span></span><span class="manual-categoria">RH</span><time class="manual-data" datetime="2026-07-29">29/07/2026</time><i class="fa-solid fa-chevron-right manual-seta" aria-hidden="true"></i></a></section></main><script src="js/layout.js"></script><script src="js/app.js"></script>
+  <aside class="sidebar" aria-label="Navegação principal"></aside>
+
+  <main class="conteudo">
+    <header class="topo">
+      <label class="visually-hidden" for="pesquisa-manuais">Pesquisar manuais</label>
+      <input id="pesquisa-manuais" type="search" placeholder="Pesquisar manuais...">
+
+      <div class="usuario">
+        <i class="fa-solid fa-user" aria-hidden="true"></i>
+        Cauan
+      </div>
+    </header>
+
+    <section class="titulo-pagina">
+      <h1><i class="fa-solid fa-book-open" aria-hidden="true"></i> Manuais</h1>
+      <p>Consulte os procedimentos internos da empresa.</p>
+    </section>
+
+    <nav class="categorias" aria-label="Categorias de manuais">
+      <button class="categoria ativa" type="button">Todos</button>
+      <button class="categoria" type="button">RH</button>
+      <button class="categoria" type="button">Financeiro</button>
+      <button class="categoria" type="button">TI</button>
+      <button class="categoria" type="button">Operacional</button>
+    </nav>
+
+    <section class="lista-manuais" aria-label="Lista de manuais">
+      <a class="manual" href="manuais/ti/FLW.pdf" target="_blank" rel="noopener">
+        <span class="manual-icone"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i></span>
+        <span class="manual-info">
+          <strong>Acesso remoto VPN</strong>
+          <span>Passo a passo para conectar na VPN da empresa.</span>
+        </span>
+        <span class="manual-categoria">TI</span>
+        <time class="manual-data" datetime="2026-07-20">20/07/2026</time>
+        <i class="fa-solid fa-chevron-right manual-seta" aria-hidden="true"></i>
+      </a>
+
+      <a class="manual" href="manuais/rh/ComoRealizarInclusaoColaboradores.pdf" target="_blank" rel="noopener">
+        <span class="manual-icone"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i></span>
+        <span class="manual-info">
+          <strong>Cadastro de funcionário no relógio de ponto</strong>
+          <span>Passo a passo para cadastro de funcionários com e sem digital.</span>
+        </span>
+        <span class="manual-categoria">RH</span>
+        <time class="manual-data" datetime="2026-07-29">29/07/2026</time>
+        <i class="fa-solid fa-chevron-right manual-seta" aria-hidden="true"></i>
+      </a>
+    </section>
+  </main>
+
+  <script src="js/layout.js"></script>
+  <script src="js/app.js"></script>
 </body>
 </html>
