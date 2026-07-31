@@ -8,27 +8,58 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <aside class="sidebar" aria-label="Navegação principal">
-    <a class="brand" href="index.html" aria-label="Portal Vesper - início"><img src="img/GVSPLogo.png" class="logo" alt="Vesper Transportes"></a>
-    <nav class="menu">
-      <a href="index.html"><i class="fa-solid fa-house menu-icon" aria-hidden="true"></i>Início</a>
-      <a href="manuais.html"><i class="fa-solid fa-book-open menu-icon" aria-hidden="true"></i>Manuais</a>
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSf6FDbbCepjjwuYp5Xspb2bBjO5a2hNAEAKkRcPxEtlUfdWHg/viewform" target="_blank" rel="noopener"><i class="fa-solid fa-headset menu-icon" aria-hidden="true"></i>Abrir chamado</a>
-      <a href="downloads.html"><i class="fa-solid fa-download menu-icon" aria-hidden="true"></i>Downloads</a>
-      <a href="comunicados.html"><i class="fa-solid fa-bullhorn menu-icon" aria-hidden="true"></i>Comunicados</a>
-      <a href="contatos.html"><i class="fa-solid fa-users menu-icon" aria-hidden="true"></i>Contatos</a>
-    </nav>
-    <footer class="versao"><p><strong>Versão 1.0.0</strong></p><p>© 2026 Vesper Transportes</p></footer>
-  </aside>
+  <aside class="sidebar" aria-label="Navegação principal"></aside>
+
   <main class="conteudo">
-    <header class="topo"><label class="visually-hidden" for="pesquisa-geral">Pesquisar</label><input id="pesquisa-geral" type="search" placeholder="Pesquisar manuais, sistemas..." disabled><div class="usuario"><i class="fa-solid fa-user" aria-hidden="true"></i> Cauan</div></header>
-    <section class="banner"><h1>Bom dia! <span aria-hidden="true">👋</span></h1><p>Bem-vindo ao Portal Interno Vesper.</p></section>
+    <header class="topo">
+      <label class="visually-hidden" for="pesquisa-geral">Pesquisar no portal</label>
+      <div class="campo-pesquisa-geral">
+        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+        <input id="pesquisa-geral" type="search" placeholder="Pesquisar manuais e downloads..." autocomplete="off">
+        <kbd>Esc</kbd>
+      </div>
+
+      <div class="usuario">
+        <i class="fa-solid fa-user" aria-hidden="true"></i>
+        Cauan
+      </div>
+    </header>
+
+    <section id="resultados-pesquisa" class="resultados-pesquisa" aria-live="polite" hidden>
+      <header class="cabecalho-resultados">
+        <p id="resumo-pesquisa"></p>
+        <button id="limpar-pesquisa" type="button">Limpar busca</button>
+      </header>
+      <div id="lista-resultados" class="lista-resultados"></div>
+    </section>
+
+    <section class="banner">
+      <h1>Bom dia! <span aria-hidden="true">👋</span></h1>
+      <p>Bem-vindo ao Portal Interno Vesper.</p>
+    </section>
+
     <section class="cards" aria-label="Acessos rápidos">
-      <a class="card" href="https://docs.google.com/forms/d/e/1FAIpQLSf6FDbbCepjjwuYp5Xspb2bBjO5a2hNAEAKkRcPxEtlUfdWHg/viewform" target="_blank" rel="noopener"><span class="icone-card"><i class="fa-solid fa-headset" aria-hidden="true"></i></span><h2>Abrir chamado</h2><p>Solicite atendimento da equipe de TI.</p><span class="botao">Abrir</span></a>
-      <a class="card" href="manuais.html"><span class="icone-card"><i class="fa-solid fa-book" aria-hidden="true"></i></span><h2>Manuais</h2><p>Consulte os procedimentos internos.</p><span class="botao">Acessar</span></a>
-      <a class="card" href="downloads.html"><span class="icone-card"><i class="fa-solid fa-download" aria-hidden="true"></i></span><h2>Downloads</h2><p>Programas e links oficiais.</p><span class="botao">Abrir</span></a>
+      <a class="card" href="https://docs.google.com/forms/d/e/1FAIpQLSf6FDbbCepjjwuYp5Xspb2bBjO5a2hNAEAKkRcPxEtlUfdWHg/viewform" target="_blank" rel="noopener">
+        <span class="icone-card"><i class="fa-solid fa-headset" aria-hidden="true"></i></span>
+        <h2>Abrir chamado</h2>
+        <p>Solicite atendimento da equipe de TI.</p>
+        <span class="botao">Abrir</span>
+      </a>
+      <a class="card" href="manuais.html">
+        <span class="icone-card"><i class="fa-solid fa-book" aria-hidden="true"></i></span>
+        <h2>Manuais</h2>
+        <p>Consulte os procedimentos internos.</p>
+        <span class="botao">Acessar</span>
+      </a>
+      <a class="card" href="downloads.html">
+        <span class="icone-card"><i class="fa-solid fa-download" aria-hidden="true"></i></span>
+        <h2>Downloads</h2>
+        <p>Programas e links oficiais.</p>
+        <span class="botao">Abrir</span>
+      </a>
     </section>
   </main>
+
   <script src="js/layout.js"></script>
   <script src="js/app.js"></script>
 </body>
