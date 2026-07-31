@@ -641,3 +641,9 @@ td:nth-child(2){
     }
 
 }
+
+.menu a.active {
+    background-color: #2F6BFF;
+    color: white;
+    border-radius: 10px;
+}
