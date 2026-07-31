@@ -44,7 +44,7 @@ if (portalSearchField) {
   const resultsSummary = document.querySelector("#resumo-pesquisa");
   const resultsList = document.querySelector("#lista-resultados");
   const clearSearchButton = document.querySelector("#limpar-pesquisa");
-  const searchableContent = [
+  let searchableContent = [
     {
       type: "Manual",
       icon: "fa-file-pdf",
@@ -61,6 +61,15 @@ if (portalSearchField) {
       category: "RH",
       href: "manuais/rh/ComoRealizarInclusaoColaboradores.pdf",
     },
+    {
+      type: "Manual",
+      icon: "fa-file-pdf",
+      title: "Início rápido AnyDesk",
+      description: "Passo a passo para conectar no AnyDesk.",
+      category: "TI",
+      href: "https://drive.google.com/file/d/1T74uyVgjelNBi6IO8IwCOMtvf_OXnwu_/view?usp=sharing",
+      external: true,
+    },
     { type: "Download", icon: "fa-download", title: "AnyDesk", description: "Acesso remoto para suporte de TI.", category: "Programa", href: "https://anydesk.com/pt/downloads", external: true },
     { type: "Download", icon: "fa-download", title: "Google Chrome", description: "Navegador padrão homologado pela empresa.", category: "Programa", href: "https://www.google.com/chrome/", external: true },
     { type: "Download", icon: "fa-download", title: "Firefox", description: "Navegador alternativo homologado pela empresa.", category: "Programa", href: "https://www.mozilla.org/pt-BR/firefox/new/", external: true },
@@ -69,6 +78,46 @@ if (portalSearchField) {
     { type: "Download", icon: "fa-download", title: "Spark", description: "Cliente de e-mail usado pela equipe.", category: "Programa", href: "https://sparkmailapp.com/download", external: true },
     { type: "Download", icon: "fa-download", title: "WhatsApp", description: "Aplicativo de mensagens para computador.", category: "Programa", href: "https://www.whatsapp.com/download", external: true },
   ];
+
+  const getContentFromPage = async (page, selector, type, icon) => {
+    const response = await fetch(page);
+
+    if (!response.ok) {
+      throw new Error(`Não foi possível carregar ${page}.`);
+    }
+
+    const documentFromPage = new DOMParser().parseFromString(await response.text(), "text/html");
+
+    return [...documentFromPage.querySelectorAll(selector)].map((item) => ({
+      type,
+      icon,
+      title: item.querySelector(".manual-info strong, h3")?.textContent.trim() || "Sem título",
+      description: item.querySelector(".manual-info span, p")?.textContent.trim() || "",
+      category: item.querySelector(".manual-categoria")?.textContent.trim() || "Programa",
+      href: item.getAttribute("href") || "#",
+      external: item.target === "_blank",
+    }));
+  };
+
+  const loadSearchableContent = async () => {
+    try {
+      const [manuals, downloads] = await Promise.all([
+        getContentFromPage("manuais.html", ".manual", "Manual", "fa-file-pdf"),
+        getContentFromPage("downloads.html", ".card-programa", "Download", "fa-download"),
+      ]);
+
+      if (manuals.length || downloads.length) {
+        searchableContent = [...manuals, ...downloads];
+      }
+
+      if (portalSearchField.value.trim()) {
+        searchPortal();
+      }
+    } catch {
+      // Ao abrir os arquivos diretamente pelo computador, o navegador bloqueia fetch.
+      // Nesse caso, a busca usa o catálogo básico declarado acima.
+    }
+  };
 
   const normalizeSearchText = (text) => text
     .normalize("NFD")
@@ -122,6 +171,7 @@ if (portalSearchField) {
     renderSearchResults(matches, query);
   };
 
+  void loadSearchableContent();
   portalSearchField.addEventListener("input", searchPortal);
   portalSearchField.addEventListener("keydown", (event) => {
     if (event.key === "Escape") {
