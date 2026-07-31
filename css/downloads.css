@@ -152,3 +152,4 @@
 }
 
 .card-programa:focus-visible { outline:3px solid rgb(37 99 235 / .4); outline-offset:3px; }
+.card-programa[hidden] { display:none; }

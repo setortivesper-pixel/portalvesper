@@ -21,3 +21,18 @@ if (searchField) {
     });
   });
 }
+
+const downloadsSearchField = document.querySelector("#pesquisa-downloads");
+
+if (downloadsSearchField) {
+  const programs = document.querySelectorAll(".card-programa");
+
+  downloadsSearchField.addEventListener("input", () => {
+    const searchTerm = downloadsSearchField.value.trim().toLocaleLowerCase("pt-BR");
+
+    programs.forEach((program) => {
+      const programText = program.textContent.toLocaleLowerCase("pt-BR");
+      program.hidden = !programText.includes(searchTerm);
+    });
+  });
+}
