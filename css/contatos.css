@@ -531,3 +531,7 @@ a:focus-visible {
         white-space: nowrap;
     }
 }
+
+.acoes a i.fa-whatsapp {
+  color: #25D366;
+}
