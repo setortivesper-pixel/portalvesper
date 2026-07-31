@@ -89,19 +89,30 @@
     display:flex;
     justify-content:center;
     align-items:center;
-    color:white;
-    font-weight:bold;
-    font-size:15px;
+    background:#f8fafc;
+    border:1px solid #eef2f7;
+    color:#2563eb;
+    font-size:22px;
     margin-bottom:18px;
     overflow:hidden;
 }
 
-/* imagens dos logos (quando usadas ao invés de <i> do Font Awesome) */
+/* logos oficiais (favicons dos sites ou imagens próprias) */
 .card-programa .icone-programa img{
-    width:28px;
-    height:28px;
+    width:32px;
+    height:32px;
     object-fit:contain;
 }
+
+/* ícones de marca do Font Awesome (Chrome, Firefox, WhatsApp, Java) */
+.card-programa .icone-programa i{
+    font-size:24px;
+    color:#2563eb;
+}
+.card-programa .icone-programa i.fa-chrome{ color:#4285f4; }
+.card-programa .icone-programa i.fa-firefox-browser{ color:#ff7139; }
+.card-programa .icone-programa i.fa-whatsapp{ color:#25d366; }
+.card-programa .icone-programa i.fa-java{ color:#f89820; }
 
 .card-programa h3{
     font-size:18px;
@@ -140,5 +151,4 @@
     margin-top:18px;
 }
 
-.icone-programa.anydesk { background:#ef4136; }.icone-programa.chrome,.icone-programa.spark { background:#2563eb; }.icone-programa.firefox { background:#ff7139; }.icone-programa.adobe { background:#ed2224; }.icone-programa.foxit { background:#f36c21; }.icone-programa.whatsapp { background:#25d366; }
 .card-programa:focus-visible { outline:3px solid rgb(37 99 235 / .4); outline-offset:3px; }
