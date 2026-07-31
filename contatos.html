@@ -1,113 +1,363 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Contatos | Portal Vesper</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contatos | Portal Vesper</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="css/contatos.css">
 </head>
+
 <body>
-  <aside class="sidebar" aria-label="Navegação principal"></aside>
 
-  <main class="conteudo">
-    <header class="topo">
-      <label class="visually-hidden" for="pesquisa-contatos">Pesquisar contatos</label>
-      <input id="pesquisa-contatos" type="search" placeholder="Pesquisar por nome ou setor" disabled>
+<aside class="sidebar" aria-label="Navegação principal"></aside>
 
-      <div class="usuario">
-        <i class="fa-solid fa-user" aria-hidden="true"></i>
+<main class="conteudo">
+
+<header class="topo">
+
+    <label class="visually-hidden" for="pesquisa-contatos">
+        Pesquisar contatos
+    </label>
+
+    <input
+        id="pesquisa-contatos"
+        type="search"
+        placeholder="Pesquisar por nome ou setor">
+
+    <div class="usuario">
+        <i class="fa-solid fa-user"></i>
         Cauan
-      </div>
-    </header>
+    </div>
 
-    <section class="titulo-pagina">
-      <h1><i class="fa-solid fa-address-book" aria-hidden="true"></i> Contatos</h1>
-      <p>Encontre rapidamente as pessoas e setores da empresa.</p>
-    </section>
+</header>
 
-    <nav class="categorias" aria-label="Categorias de contatos">
-      <button class="categoria ativa" type="button">Todos</button>
-      <button class="categoria" type="button">RH</button>
-      <button class="categoria" type="button">Financeiro</button>
-      <button class="categoria" type="button">TI</button>
-      <button class="categoria" type="button">Operacional</button>
-      <button class="categoria" type="button">Manutenção</button>
-      <button class="categoria" type="button">Administrativo</button>
-    </nav>
+<section class="titulo-pagina">
 
-    <section class="tabela-contatos" aria-labelledby="titulo-tabela-contatos">
-      <header class="cabecalho-tabela">
-        <h2 id="titulo-tabela-contatos">Todos os contatos</h2>
-      </header>
+    <h1>
+        <i class="fa-solid fa-address-book"></i>
+        Contatos
+    </h1>
 
-      <table>
-        <thead>
-          <tr>
-            <th scope="col">Nome</th>
-            <th scope="col">Garagem</th>
-            <th scope="col">Setor</th>
-            <th scope="col">Telefone</th>
-            <th scope="col"><span class="visually-hidden">Ações</span></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>Cauan Signiglia</strong><small>Coordenador de TI</small></td>
-            <td>Vesper Jundiaí</td>
-            <td><span class="tag ti">TI</span></td>
-            <td>(11) 4598-8891</td>
-            <td class="acoes"><a href="tel:+551145988891" aria-label="Ligar para Cauan Signiglia"><i class="fa-solid fa-phone" aria-hidden="true"></i></a></td>
-          </tr>
-          <tr>
-            <td><strong>Tiago Oliveira</strong><small>Analista de Sistemas</small></td>
-            <td>Transnetti Campinas</td>
-            <td><span class="tag ti">TI</span></td>
-            <td>(11) 4598-8892</td>
-            <td class="acoes"><a href="tel:+551145988892" aria-label="Ligar para Tiago Oliveira"><i class="fa-solid fa-phone" aria-hidden="true"></i></a></td>
-          </tr>
-          <tr>
-            <td><strong>Bruna Stein</strong><small>Analista de RH</small></td>
-            <td>Vesper Limeira</td>
-            <td><span class="tag rh">RH</span></td>
-            <td>(11) 4598-8801</td>
-            <td class="acoes"><a href="tel:+551145988801" aria-label="Ligar para Bruna Stein"><i class="fa-solid fa-phone" aria-hidden="true"></i></a></td>
-          </tr>
-          <tr>
-            <td><strong>Roseli Alves</strong><small>Assistente Financeiro</small></td>
-            <td>Vesper Americana</td>
-            <td><span class="tag financeiro">Financeiro</span></td>
-            <td>(11) 4598-8802</td>
-            <td class="acoes"><a href="tel:+551145988802" aria-label="Ligar para Roseli Alves"><i class="fa-solid fa-phone" aria-hidden="true"></i></a></td>
-          </tr>
-          <tr>
-            <td><strong>João Martins</strong><small>Coordenador de Frota</small></td>
-            <td>Bybus Mogi</td>
-            <td><span class="tag operacional">Operacional</span></td>
-            <td>(11) 4598-8803</td>
-            <td class="acoes"><a href="tel:+551145988803" aria-label="Ligar para João Martins"><i class="fa-solid fa-phone" aria-hidden="true"></i></a></td>
-          </tr>
-          <tr>
-            <td><strong>Carlos Mendes</strong><small>Técnico de Manutenção</small></td>
-            <td>Lima &amp; Silva Sumaré</td>
-            <td><span class="tag manutencao">Manutenção</span></td>
-            <td>(11) 4598-8804</td>
-            <td class="acoes"><a href="tel:+551145988804" aria-label="Ligar para Carlos Mendes"><i class="fa-solid fa-phone" aria-hidden="true"></i></a></td>
-          </tr>
-          <tr>
-            <td><strong>Ana Pereira</strong><small>Assistente Administrativo</small></td>
-            <td>Vesper Atibaia</td>
-            <td><span class="tag administrativo">Administrativo</span></td>
-            <td>(11) 4598-8805</td>
-            <td class="acoes"><a href="tel:+551145988805" aria-label="Ligar para Ana Pereira"><i class="fa-solid fa-phone" aria-hidden="true"></i></a></td>
-          </tr>
-          <tr>
-            <td><strong>Marcos Silva</strong><small>Supervisor Operacional</small></td>
-            <td>Transnetti Indaiatuba</td>
-            <td><span class="tag operacional">Operacional</span></td>
-            <td>(11) 4598-8806</td>
-            <td class="acoes"><a href="tel:+551145988806" aria-label="Ligar para Marcos Silva"><i class="fa-solid fa-phone" aria-hidden="true"></i></a></td>
-          </tr>
+    <p>
+        Encontre rapidamente os contatos das garagens e setores.
+    </p>
+
+</section>
+
+<nav class="categorias">
+
+<button class="categoria ativa" data-filtro="todos">Todos</button>
+<button class="categoria" data-filtro="administrativo">Administrativo</button>
+<button class="categoria" data-filtro="almoxarifado">Almoxarifado</button>
+<button class="categoria" data-filtro="comercial">Comercial</button>
+<button class="categoria" data-filtro="financeiro">Financeiro</button>
+<button class="categoria" data-filtro="operacional">Operacional</button>
+<button class="categoria" data-filtro="rh">RH</button>
+<button class="categoria" data-filtro="compras">Compras</button>
+<button class="categoria" data-filtro="seguranca">Segurança</button>
+
+</nav>
+
+<section class="tabela-contatos">
+
+<header class="cabecalho-tabela">
+<h2>Lista de Contatos</h2>
+</header>
+
+<table>
+
+<thead>
+
+<tr>
+<th>Setor</th>
+<th>Garagem</th>
+<th>Categoria</th>
+<th>Telefone</th>
+<th></th>
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr data-categoria="administrativo">
+<td><strong>Administrativo</strong><small>Setor Administrativo</small></td>
+<td>Vesper Jundiaí</td>
+<td><span class="tag administrativo">Administrativo</span></td>
+<td>11 95765-9350</td>
+<td class="acoes"><a href="tel:+5511957659350"><i class="fa-solid fa-phone"></i></a></td>
+</tr>
+
+<tr data-categoria="almoxarifado">
+<td><strong>Almoxarifado</strong><small>Base Operacional</small></td>
+<td>Vesper Limeira</td>
+<td><span class="tag almoxarifado">Almoxarifado</span></td>
+<td>19 98453-0079</td>
+<td class="acoes"><a href="tel:+5519984530079"><i class="fa-solid fa-phone"></i></a></td>
+</tr>
+
+<tr data-categoria="almoxarifado">
+<td><strong>Almoxarifado</strong><small>Base Operacional</small></td>
+<td>Transnetti Indaiatuba</td>
+<td><span class="tag almoxarifado">Almoxarifado</span></td>
+<td>19 98346-5704</td>
+<td class="acoes"><a href="tel:+5519983465704"><i class="fa-solid fa-phone"></i></a></td>
+</tr>
+
+<tr data-categoria="almoxarifado">
+<td><strong>Almoxarifado</strong><small>Base Operacional</small></td>
+<td>Bybus Mogi</td>
+<td><span class="tag almoxarifado">Almoxarifado</span></td>
+<td>19 98346-2067</td>
+<td class="acoes"><a href="tel:+5519983462067"><i class="fa-solid fa-phone"></i></a></td>
+</tr>
+
+<tr data-categoria="almoxarifado">
+<td><strong>Almoxarifado</strong><small>Base Operacional</small></td>
+<td>Vesper Americana</td>
+<td><span class="tag almoxarifado">Almoxarifado</span></td>
+<td>11 95765-8545</td>
+<td class="acoes"><a href="tel:+5511957658545"><i class="fa-solid fa-phone"></i></a></td>
+</tr>
+
+<tr data-categoria="almoxarifado">
+<td><strong>Almoxarifado</strong><small>Base Operacional</small></td>
+<td>Vesper Jundiaí</td>
+<td><span class="tag almoxarifado">Almoxarifado</span></td>
+<td>11 95764-8264</td>
+<td class="acoes"><a href="tel:+5511957648264"><i class="fa-solid fa-phone"></i></a></td>
+</tr>
+
+<tr data-categoria="comercial">
+<td><strong>Comercial</strong><small>Equipe Comercial</small></td>
+<td>Bybus Mogi</td>
+<td><span class="tag comercial">Comercial</span></td>
+<td>19 98346-0817</td>
+<td class="acoes"><a href="tel:+5519983460817"><i class="fa-solid fa-phone"></i></a></td>
+</tr>
+
+<tr data-categoria="comercial">
+<td><strong>Comercial</strong><small>Equipe Comercial</small></td>
+<td>Campinas</td>
+<td><span class="tag comercial">Comercial</span></td>
+<td>19 98346-0269</td>
+<td class="acoes"><a href="tel:+5519983460269"><i class="fa-solid fa-phone"></i></a></td>
+</tr>
+
+<tr data-categoria="comercial">
+<td><strong>Comercial</strong><small>Equipe Comercial</small></td>
+<td>Vesper Limeira</td>
+<td><span class="tag comercial">Comercial</span></td>
+<td>19 98385-4435</td>
+<td class="acoes"><a href="tel:+5519983854435"><i class="fa-solid fa-phone"></i></a></td>
+</tr>
+
+<tr data-categoria="comercial">
+<td><strong>Comercial</strong><small>Equipe Comercial</small></td>
+<td>Vesper Jundiaí</td>
+<td><span class="tag comercial">Comercial</span></td>
+<td>11 95765-8544</td>
+<td class="acoes"><a href="tel:+5511957658544"><i class="fa-solid fa-phone"></i></a></td>
+</tr>
+
+<tr data-categoria="comercial">
+<td><strong>Comercial</strong><small>Equipe Comercial</small></td>
+<td>Vesper Americana</td>
+<td><span class="tag comercial">Comercial</span></td>
+<td>19 98346-6454</td>
+<td class="acoes"><a href="tel:+5519983466454"><i class="fa-solid fa-phone"></i></a></td>
+</tr>
+
+<tr data-categoria="financeiro">
+<td><strong>Financeiro</strong><small>Equipe Financeira</small></td>
+<td>Vesper Limeira</td>
+<td><span class="tag financeiro">Financeiro</span></td>
+<td>11 95764-8274</td>
+<td class="acoes"><a href="tel:+5511957648274"><i class="fa-solid fa-phone"></i></a></td>
+</tr>
+
+
+<tr data-categoria="operacional">
+    <td><strong>Operacional</strong><small>Equipe Operacional</small></td>
+    <td>Vesper Limeira</td>
+    <td><span class="tag operacional">Operacional</span></td>
+    <td>19 98346-3353</td>
+    <td class="acoes">
+        <a href="tel:+5519983463353">
+            <i class="fa-solid fa-phone"></i>
+        </a>
+    </td>
+</tr>
+
+<tr data-categoria="operacional">
+    <td><strong>Operacional</strong><small>Equipe Operacional</small></td>
+    <td>Transnetti Indaiatuba</td>
+    <td><span class="tag operacional">Operacional</span></td>
+    <td>11 95765-9365</td>
+    <td class="acoes">
+        <a href="tel:+5511957659365">
+            <i class="fa-solid fa-phone"></i>
+        </a>
+    </td>
+</tr>
+
+<tr data-categoria="operacional">
+    <td><strong>Operacional</strong><small>Equipe Operacional</small></td>
+    <td>Vesper Jundiaí</td>
+    <td><span class="tag operacional">Operacional</span></td>
+    <td>19 98453-0087</td>
+    <td class="acoes">
+        <a href="tel:+5519984530087">
+            <i class="fa-solid fa-phone"></i>
+        </a>
+    </td>
+</tr>
+
+<tr data-categoria="operacional">
+    <td><strong>Operacional</strong><small>Equipe Operacional</small></td>
+    <td>Vesper Americana</td>
+    <td><span class="tag operacional">Operacional</span></td>
+    <td>19 98346-0986</td>
+    <td class="acoes">
+        <a href="tel:+5519983460986">
+            <i class="fa-solid fa-phone"></i>
+        </a>
+    </td>
+</tr>
+
+<tr data-categoria="operacional">
+    <td><strong>Operacional</strong><small>Equipe Operacional</small></td>
+    <td>Bybus Mogi</td>
+    <td><span class="tag operacional">Operacional</span></td>
+    <td>19 98346-0017</td>
+    <td class="acoes">
+        <a href="tel:+5519983460017">
+            <i class="fa-solid fa-phone"></i>
+        </a>
+    </td>
+</tr>
+
+<tr data-categoria="operacional">
+    <td><strong>Operacional</strong><small>Equipe Operacional</small></td>
+    <td>Vesper Atibaia</td>
+    <td><span class="tag operacional">Operacional</span></td>
+    <td>19 98346-7168</td>
+    <td class="acoes">
+        <a href="tel:+5519983467168">
+            <i class="fa-solid fa-phone"></i>
+        </a>
+    </td>
+</tr>
+
+<tr data-categoria="operacional">
+    <td><strong>Operacional</strong><small>Equipe Operacional</small></td>
+    <td>Lima &amp; Silva</td>
+    <td><span class="tag operacional">Operacional</span></td>
+    <td>19 98135-4332</td>
+    <td class="acoes">
+        <a href="tel:+5519981354332">
+            <i class="fa-solid fa-phone"></i>
+        </a>
+    </td>
+</tr>
+
+<tr data-categoria="rh">
+    <td><strong>RH</strong><small>Recursos Humanos</small></td>
+    <td>Bybus Mogi</td>
+    <td><span class="tag rh">RH</span></td>
+    <td>19 98346-0974</td>
+    <td class="acoes">
+        <a href="tel:+5519983460974">
+            <i class="fa-solid fa-phone"></i>
+        </a>
+    </td>
+</tr>
+
+<tr data-categoria="rh">
+    <td><strong>RH</strong><small>Recursos Humanos</small></td>
+    <td>Transnetti Indaiatuba</td>
+    <td><span class="tag rh">RH</span></td>
+    <td>11 98452-2845</td>
+    <td class="acoes">
+        <a href="tel:+5511984522845">
+            <i class="fa-solid fa-phone"></i>
+        </a>
+    </td>
+</tr>
+
+<tr data-categoria="rh">
+    <td><strong>RH</strong><small>Recursos Humanos</small></td>
+    <td>Vesper Atibaia</td>
+    <td><span class="tag rh">RH</span></td>
+    <td>11 94250-8565</td>
+    <td class="acoes">
+        <a href="tel:+5511942508565">
+            <i class="fa-solid fa-phone"></i>
+        </a>
+    </td>
+</tr>
+
+<tr data-categoria="rh">
+    <td><strong>RH</strong><small>Recursos Humanos</small></td>
+    <td>Vesper Limeira</td>
+    <td><span class="tag rh">RH</span></td>
+    <td>19 98346-3443</td>
+    <td class="acoes">
+        <a href="tel:+5519983463443">
+            <i class="fa-solid fa-phone"></i>
+        </a>
+    </td>
+</tr>
+
+<tr data-categoria="rh">
+    <td><strong>RH</strong><small>Recursos Humanos</small></td>
+    <td>Vesper Jundiaí</td>
+    <td><span class="tag rh">RH</span></td>
+    <td>19 98346-1128</td>
+    <td class="acoes">
+        <a href="tel:+5519983461128">
+            <i class="fa-solid fa-phone"></i>
+        </a>
+    </td>
+</tr>
+
+<tr data-categoria="rh">
+    <td><strong>RH</strong><small>Recursos Humanos</small></td>
+    <td>Vesper Americana</td>
+    <td><span class="tag rh">RH</span></td>
+    <td>19 98346-2277</td>
+    <td class="acoes">
+        <a href="tel:+5519983462277">
+            <i class="fa-solid fa-phone"></i>
+        </a>
+    </td>
+</tr>
+
+<tr data-categoria="compras">
+    <td><strong>Compras</strong><small>Departamento de Compras</small></td>
+    <td>Vesper Jundiaí</td>
+    <td><span class="tag compras">Compras</span></td>
+    <td>19 98346-5047</td>
+    <td class="acoes">
+        <a href="tel:+5519983465047">
+            <i class="fa-solid fa-phone"></i>
+        </a>
+    </td>
+</tr>
+
+<tr data-categoria="seguranca">
+    <td><strong>Técnico de Segurança</strong><small>Segurança do Trabalho</small></td>
+    <td>Vesper Jundiaí</td>
+    <td><span class="tag seguranca">Segurança</span></td>
+    <td>19 98346-5741</td>
+    <td class="acoes">
+        <a href="tel:+5519983465741">
+            <i class="fa-solid fa-phone"></i>
+        </a>
+    </td>
+</tr>
         </tbody>
       </table>
     </section>
@@ -115,5 +365,60 @@
 
   <script src="js/layout.js"></script>
   <script src="js/app.js"></script>
+
+  <script>
+  (function () {
+
+      var campoPesquisa = document.getElementById('pesquisa-contatos');
+      var botoesCategoria = document.querySelectorAll('.categoria');
+      var linhas = document.querySelectorAll('.tabela-contatos tbody tr');
+
+      var filtroAtivo = 'todos';
+
+      function normalizar(texto) {
+          return texto
+              .toLowerCase()
+              .normalize('NFD')
+              .replace(/[\u0300-\u036f]/g, '');
+      }
+
+      function aplicarFiltros() {
+
+          var termo = normalizar(campoPesquisa.value.trim());
+
+          linhas.forEach(function (linha) {
+
+              var categoria = linha.getAttribute('data-categoria') || '';
+              var textoLinha = normalizar(linha.textContent);
+
+              var passaCategoria = (filtroAtivo === 'todos' || categoria === filtroAtivo);
+              var passaPesquisa = (termo === '' || textoLinha.indexOf(termo) !== -1);
+
+              linha.style.display = (passaCategoria && passaPesquisa) ? '' : 'none';
+          });
+      }
+
+      if (campoPesquisa) {
+          campoPesquisa.addEventListener('input', aplicarFiltros);
+      }
+
+      botoesCategoria.forEach(function (botao) {
+          botao.addEventListener('click', function () {
+
+              botoesCategoria.forEach(function (b) {
+                  b.classList.remove('ativa');
+              });
+              botao.classList.add('ativa');
+
+              filtroAtivo = botao.getAttribute('data-filtro') || 'todos';
+              aplicarFiltros();
+          });
+      });
+
+  })();
+  </script>
+
 </body>
 </html>
+
+
