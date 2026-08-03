@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Sugestão de Melhoria | Portal Vesper</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/sugestao.css">
+    <link rel="icon" type="image/png" href="img/faviconvesper.png">
+
+</head>
+
+<body>
+
+    <aside class="sidebar" aria-label="Navegação principal"></aside>
+
+    <main class="conteudo">
+
+        <!-- Barra superior -->
+
+        <header class="topo">
+
+            <label class="visually-hidden" for="pesquisa-geral">
+                Pesquisar no portal
+            </label>
+
+            <div class="campo-pesquisa-geral">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    id="pesquisa-geral"
+                    type="search"
+                    placeholder="Pesquisar manuais e downloads..."
+                    autocomplete="off">
+
+            </div>
+
+        </header>
+
+        <!-- Resultados da pesquisa -->
+
+        <section id="resultados-pesquisa"
+            class="resultados-pesquisa"
+            aria-live="polite"
+            hidden>
+
+            <header class="cabecalho-resultados">
+
+                <p id="resumo-pesquisa"></p>
+
+                <button
+                    id="limpar-pesquisa"
+                    type="button">
+
+                    Limpar busca
+
+                </button>
+
+            </header>
+
+            <div id="lista-resultados"
+                class="lista-resultados">
+
+            </div>
+
+        </section>
+
+
+        <!-- Banner -->
+
+        <section class="banner">
+
+            <div class="banner-topo">
+
+                <div class="banner-icone">
+
+                    <i class="fa-regular fa-lightbulb"></i>
+
+                </div>
+
+                <div class="banner-textos">
+
+                    <h1>
+
+                        Sugestão de
+                        <span class="destaque">Melhoria</span>
+
+                    </h1>
+
+                    <p class="banner-subtitulo">
+
+                        Sua opinião nos ajuda a evoluir.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <p>
+
+                Encontrou uma oportunidade de melhoria?
+
+                Compartilhe sua ideia ou indique um recurso que ainda não existe
+                no Portal Interno. Todas as sugestões serão analisadas pela equipe
+                responsável.
+
+            </p>
+
+        </section>
+
+
+        <!-- Formulário -->
+
+        <section class="card-formulario">
+
+            <h2>
+
+                <i class="fa-solid fa-comments"></i>
+
+                Envie sua sugestão
+
+            </h2>
+
+            <p>
+
+                Ajude-nos a construir um Portal Interno cada vez melhor.
+
+            </p>
+
+
+            <form id="formSugestao">
+
+                <div class="linha">
+
+                    <div class="campo">
+
+                        <label for="nome">
+
+                            Nome completo
+
+                        </label>
+
+                        <input
+                            id="nome"
+                            type="text"
+                            placeholder="Digite seu nome completo"
+                            required>
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="garagem">
+
+                            Garagem
+
+                        </label>
+
+                        <select
+                            id="garagem"
+                            required>
+
+                            <option value="">Selecione uma garagem</option>
+
+                            <option>Jundiaí</option>
+
+                            <option>Limeira</option>
+
+                            <option>Mogi</option>
+
+                            <option>Indaiatuba</option>
+
+                            <option>Americana</option>
+
+                            <option>Atibaia</option>
+
+                            <option>Sumaré</option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="sugestao">
+
+                        Qual a sua sugestão?
+
+                    </label>
+
+                    <textarea
+
+                        id="sugestao"
+
+                        maxlength="500"
+
+                        placeholder="Descreva sua ideia de melhoria ou um novo recurso que gostaria de utilizar no Portal Interno."
+
+                        required>
+
+                    </textarea>
+
+                    <div class="contador">
+
+                        <span id="contador">0</span> / 500 caracteres
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="botao-enviar">
+
+                    <i class="fa-solid fa-paper-plane"></i>
+
+                    Enviar sugestão
+
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <script>
+
+        const textarea = document.getElementById("sugestao");
+        const contador = document.getElementById("contador");
+
+        textarea.addEventListener("input", function () {
+
+            contador.textContent = this.value.length;
+
+        });
+
+    </script>
+
+    <script src="js/layout.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>
