@@ -6,7 +6,7 @@
 
 body{
     font-family:Arial, Helvetica, sans-serif;
-    background:#f4f6fb;
+    background:#F8F9F7;
 }
 
 /* Barra lateral */
@@ -16,7 +16,7 @@ body{
     width:260px;
     height:100vh;
 
-    background:#12233f;
+    background:#173628;
 
     position:fixed;
 
@@ -52,7 +52,7 @@ body{
 
 .sidebar a:hover{
 
-    background:#2b63d9;
+    background:#05693E;
 
 }
 
@@ -204,7 +204,7 @@ body{
 }
 .icone{
     font-size:48px;
-    color:#2563eb;
+    color:#49597c;
     margin-bottom:20px;
 }
 .menu-icon{
@@ -643,7 +643,7 @@ td:nth-child(2){
 }
 
 .menu a.active {
-    background-color: #2F6BFF;
+    background-color: #05693E;
     color: white;
     border-radius: 10px;
 }
