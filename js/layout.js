@@ -1,14 +1,14 @@
 const navigationItems = [
   { href: "index.html", icon: "fa-house", label: "In&iacute;cio" },
   { href: "manuais.html", icon: "fa-solid fa-book", label: "Manuais" },
+  { href: "downloads.html", icon: "fa-download", label: "Downloads" },
+  { href: "contatos.html", icon: "fa-users", label: "Contatos" },
   {
     href: "https://docs.google.com/forms/d/e/1FAIpQLSf6FDbbCepjjwuYp5Xspb2bBjO5a2hNAEAKkRcPxEtlUfdWHg/viewform",
     icon: "fa-headset",
     label: "Abrir chamado",
     external: true,
   },
-  { href: "downloads.html", icon: "fa-download", label: "Downloads" },
-  { href: "contatos.html", icon: "fa-users", label: "Contatos" },
  ];
 
 const sidebar = document.querySelector(".sidebar");
