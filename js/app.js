@@ -186,3 +186,41 @@ if (portalSearchField) {
     portalSearchField.focus();
   });
 }
+
+const adminModal = document.querySelector("#modal-admin");
+
+if (adminModal) {
+  const openAdminModal = document.querySelector("[data-admin-open]");
+  const loginField = adminModal.querySelector("#admin-login");
+  const passwordField = adminModal.querySelector("#admin-senha");
+  const passwordToggle = adminModal.querySelector("[data-toggle-password]");
+  const closeAdminModal = () => {
+    adminModal.classList.remove("aberto");
+    adminModal.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("modal-aberto");
+    openAdminModal?.focus();
+  };
+  const showAdminModal = () => {
+    adminModal.classList.add("aberto");
+    adminModal.setAttribute("aria-hidden", "false");
+    document.body.classList.add("modal-aberto");
+    loginField.focus();
+  };
+
+  openAdminModal?.addEventListener("click", showAdminModal);
+  adminModal.querySelectorAll("[data-admin-close]").forEach((button) => button.addEventListener("click", closeAdminModal));
+  passwordToggle.addEventListener("click", () => {
+    const showPassword = passwordField.type === "password";
+    passwordField.type = showPassword ? "text" : "password";
+    passwordToggle.setAttribute("aria-label", showPassword ? "Ocultar senha" : "Mostrar senha");
+    passwordToggle.innerHTML = `<i class="fa-regular fa-eye${showPassword ? "-slash" : ""}" aria-hidden="true"></i>`;
+  });
+  adminModal.querySelector("#form-admin").addEventListener("submit", (event) => {
+    event.preventDefault();
+    window.location.href = "admin/";
+    // Integre aqui a autenticação do seu backend antes de liberar o painel.
+  });
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && adminModal.classList.contains("aberto")) closeAdminModal();
+  });
+}

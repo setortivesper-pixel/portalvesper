@@ -18,8 +18,10 @@
         <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
         <input id="pesquisa-geral" type="search" placeholder="Pesquisar manuais e downloads..." autocomplete="off">
       </div>
-
-
+      <button class="botao-admin" type="button" data-admin-open>
+        <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+        Admin
+      </button>
     </header>
 
     <section id="resultados-pesquisa" class="resultados-pesquisa" aria-live="polite" hidden>
@@ -56,6 +58,40 @@
       </a>
     </section>
   </main>
+
+  <div class="modal-admin" id="modal-admin" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="titulo-admin">
+    <div class="modal-admin__backdrop" data-admin-close></div>
+    <section class="modal-admin__card">
+      <button class="modal-admin__fechar" type="button" aria-label="Fechar área administrativa" data-admin-close>
+        <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+      </button>
+      <img class="modal-admin__logo" src="img/GVSPLogo.png" alt="Vesper Transportes">
+      <h2 id="titulo-admin">Área Administrativa</h2>
+      <p class="modal-admin__texto">Entre com suas credenciais para continuar</p>
+
+      <form class="form-admin" id="form-admin">
+        <div class="form-admin__grupo">
+          <label for="admin-login">Login</label>
+          <span class="form-admin__campo">
+            <i class="fa-regular fa-user" aria-hidden="true"></i>
+            <input id="admin-login" name="login" type="text" placeholder="Digite seu login" autocomplete="username" required>
+          </span>
+        </div>
+        <div class="form-admin__grupo">
+          <label for="admin-senha">Senha</label>
+          <span class="form-admin__campo">
+            <i class="fa-solid fa-lock" aria-hidden="true"></i>
+            <input id="admin-senha" name="senha" type="password" placeholder="Digite sua senha" autocomplete="current-password" required>
+            <button class="form-admin__senha" type="button" aria-label="Mostrar senha" data-toggle-password>
+              <i class="fa-regular fa-eye" aria-hidden="true"></i>
+            </button>
+          </span>
+        </div>
+        <button class="form-admin__entrar" type="submit">Entrar</button>
+        <button class="form-admin__cancelar" type="button" data-admin-close>Cancelar</button>
+      </form>
+    </section>
+  </div>
 
   <script src="js/layout.js"></script>
   <script src="js/app.js"></script>
