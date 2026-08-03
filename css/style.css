@@ -787,6 +787,16 @@ td:nth-child(2){
     border-radius: 10px;
 }
 
+.sidebar a.brand{
+    padding:0;
+    margin:0 auto 32px;
+    border-radius:0;
+}
+
+.sidebar a.brand:hover{
+    background:none;
+}
+
 /* Componentes refatorados */
 .sidebar { display:flex; flex-direction:column; padding:30px 20px; }
 .brand { display:block; width:max-content; margin:0 auto 32px; }
