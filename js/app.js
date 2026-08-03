@@ -11,13 +11,38 @@ const searchField = document.querySelector("#pesquisa-manuais");
 
 if (searchField) {
   const manuals = document.querySelectorAll(".manual");
+  const categoryButtons = document.querySelectorAll(".categorias .categoria");
+  let selectedCategory = "todos";
 
-  searchField.addEventListener("input", () => {
-    const searchTerm = searchField.value.trim().toLocaleLowerCase("pt-BR");
+  const normalizeManualText = (text) => text
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLocaleLowerCase("pt-BR");
+
+  const applyManualFilters = () => {
+    const searchTerm = normalizeManualText(searchField.value.trim());
 
     manuals.forEach((manual) => {
-      const manualText = manual.textContent.toLocaleLowerCase("pt-BR");
-      manual.hidden = !manualText.includes(searchTerm);
+      const manualText = normalizeManualText(manual.textContent);
+      const manualCategory = normalizeManualText(manual.querySelector(".manual-categoria")?.textContent || "");
+      const matchesSearch = !searchTerm || manualText.includes(searchTerm);
+      const matchesCategory = selectedCategory === "todos" || manualCategory === selectedCategory;
+
+      manual.hidden = !(matchesSearch && matchesCategory);
+    });
+  };
+
+  searchField.addEventListener("input", applyManualFilters);
+
+  categoryButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      selectedCategory = button.dataset.filtro || "todos";
+
+      categoryButtons.forEach((categoryButton) => {
+        categoryButton.classList.toggle("ativa", categoryButton === button);
+      });
+
+      applyManualFilters();
     });
   });
 }
