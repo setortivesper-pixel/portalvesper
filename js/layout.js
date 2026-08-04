@@ -41,6 +41,6 @@ if (sidebar) {
     </nav>
     <footer class="versao">
       <p><strong>Vers&atilde;o 1.0.0</strong></p>
-      <p>&copy; 2026 Vesper Transportes</p>
+      <p>ⒶⒸⒸ 2026 Vesper Transportes</p>
     </footer>`;
 }
