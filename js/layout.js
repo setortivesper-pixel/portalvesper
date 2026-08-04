@@ -36,10 +36,12 @@ if (sidebar) {
     <a class="brand" href="index.html" aria-label="Portal Vesper - in&iacute;cio">
       <img src="img/GVSPLogo.png" class="logo" alt="Vesper Transportes">
     </a>
+    <span class="menu-eyebrow">Menu principal</span>
     <nav class="menu" aria-label="Navega&ccedil;&atilde;o principal">
       ${menuItems}
     </nav>
     <footer class="versao">
+      <div class="versao-status"><span class="status-dot" aria-hidden="true"></span>Sistema online</div>
       <p><strong>Vers&atilde;o 1.0.0</strong></p>
       <p>&copy; 2026 Vesper Transportes</p>
     </footer>`;
