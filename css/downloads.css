@@ -28,9 +28,10 @@
     font-size:14px;
 }
 
+/*Cor card do aviso de seguranca pag download*/
 .aviso-seguranca{
-    background:#eaf2ff;
-    border:1px solid #cfe1ff;
+    background:#edffea;
+    border:1px solid #d9ffcf;
     border-radius:15px;
     padding:20px 25px;
     display:flex;
@@ -39,9 +40,10 @@
     margin-bottom:30px;
 }
 
+/*Cor do escudo do aviso de seguranca pag download*/
 .aviso-seguranca .icone{
     font-size:26px;
-    color:#2563eb;
+    color:#5EBA49;
     margin:0;
 }
 
