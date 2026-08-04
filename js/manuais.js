@@ -79,17 +79,29 @@ const renderizarManuais = (manuais, container) => {
    Pesquisa e filtro por categoria
 ========================================================== */
 
+const ITENS_POR_PAGINA_PADRAO = 10;
+
 const iniciarPaginaManuais = () => {
   const container = document.querySelector("#lista-manuais");
   const campoPesquisa = document.querySelector("#pesquisa-manuais");
   const botoesCategoria = document.querySelectorAll(".categorias .categoria");
+  const navPaginacao = document.querySelector("#paginacao-manuais");
+  const contador = document.querySelector("#contador-manuais");
+  const seletorItensPorPagina = document.querySelector("#itens-por-pagina");
 
   if (!container || !campoPesquisa || !botoesCategoria.length) {
     return;
   }
 
-  const estado = { pesquisa: "", categoria: "todos" };
+  const estado = {
+    pesquisa: "",
+    categoria: "todos",
+    paginaAtual: 1,
+    itensPorPagina: ITENS_POR_PAGINA_PADRAO,
+  };
 
+  // Fonte dos dados: hoje é local (window.portalData.manuais), no futuro
+  // pode ser substituída por uma chamada a uma API sem alterar as funções abaixo.
   const obterManuaisFiltrados = () => window.portalData.manuais.filter((manual) => {
     const conteudoManual = normalizarTexto([
       manual.titulo,
@@ -104,20 +116,134 @@ const iniciarPaginaManuais = () => {
     return correspondePesquisa && correspondeCategoria;
   });
 
-  const atualizarLista = () => renderizarManuais(obterManuaisFiltrados(), container);
+  /* ==========================================================
+     Paginação
+  ========================================================== */
+
+  const obterQuantidadeItensPorPagina = (totalItens) => (
+    estado.itensPorPagina === "todos" ? Math.max(totalItens, 1) : Number(estado.itensPorPagina)
+  );
+
+  const calcularTotalPaginas = (totalItens) => {
+    if (totalItens === 0) return 1;
+    return Math.ceil(totalItens / obterQuantidadeItensPorPagina(totalItens));
+  };
+
+  const obterItensPagina = (manuaisFiltrados) => {
+    if (estado.itensPorPagina === "todos") return manuaisFiltrados;
+    const porPagina = Number(estado.itensPorPagina);
+    const inicio = (estado.paginaAtual - 1) * porPagina;
+    return manuaisFiltrados.slice(inicio, inicio + porPagina);
+  };
+
+  const atualizarContador = (totalFiltrados, itensExibidos) => {
+    if (!contador) return;
+    if (totalFiltrados === 0) {
+      contador.textContent = "Nenhum manual encontrado";
+      return;
+    }
+    const porPagina = obterQuantidadeItensPorPagina(totalFiltrados);
+    const inicio = estado.itensPorPagina === "todos" ? 1 : (estado.paginaAtual - 1) * porPagina + 1;
+    const fim = inicio + itensExibidos - 1;
+    contador.textContent = `Mostrando ${inicio}–${fim} de ${totalFiltrados} manuais`;
+  };
+
+  // Gera a lista de páginas a exibir, agrupando páginas distantes com "..."
+  const obterPaginasVisiveis = (paginaAtual, totalPaginas) => {
+    const paginas = [];
+    for (let i = 1; i <= totalPaginas; i += 1) {
+      const proximaDaAtual = Math.abs(i - paginaAtual) <= 1;
+      const extremidade = i === 1 || i === totalPaginas;
+      if (proximaDaAtual || extremidade) {
+        paginas.push(i);
+      } else if (paginas[paginas.length - 1] !== "...") {
+        paginas.push("...");
+      }
+    }
+    return paginas;
+  };
+
+  const renderizarPaginacao = (totalPaginas) => {
+    if (!navPaginacao) return;
+    navPaginacao.replaceChildren();
+    if (totalPaginas <= 1) return;
+
+    const criarBotao = (label, pagina, { ativa = false, desabilitado = false } = {}) => {
+      const botao = document.createElement("button");
+      botao.type = "button";
+      botao.textContent = label;
+      botao.classList.toggle("paginacao-ativa", ativa);
+      botao.disabled = desabilitado;
+      botao.addEventListener("click", () => alterarPagina(pagina));
+      return botao;
+    };
+
+    navPaginacao.append(
+      criarBotao("◀ Anterior", estado.paginaAtual - 1, { desabilitado: estado.paginaAtual === 1 }),
+    );
+
+    obterPaginasVisiveis(estado.paginaAtual, totalPaginas).forEach((pagina) => {
+      if (pagina === "...") {
+        const reticencias = document.createElement("span");
+        reticencias.className = "paginacao-reticencias";
+        reticencias.textContent = "...";
+        navPaginacao.append(reticencias);
+      } else {
+        navPaginacao.append(criarBotao(String(pagina), pagina, { ativa: pagina === estado.paginaAtual }));
+      }
+    });
+
+    navPaginacao.append(
+      criarBotao("Próximo ▶", estado.paginaAtual + 1, { desabilitado: estado.paginaAtual === totalPaginas }),
+    );
+  };
+
+  const alterarPagina = (novaPagina) => {
+    const filtrados = obterManuaisFiltrados();
+    const totalPaginas = calcularTotalPaginas(filtrados.length);
+    estado.paginaAtual = Math.min(Math.max(novaPagina, 1), totalPaginas);
+    atualizarLista();
+  };
+
+  const atualizarLista = () => {
+    const filtrados = obterManuaisFiltrados();
+    const totalPaginas = calcularTotalPaginas(filtrados.length);
+
+    if (estado.paginaAtual > totalPaginas) estado.paginaAtual = totalPaginas;
+
+    const itensPagina = obterItensPagina(filtrados);
+    renderizarManuais(itensPagina, container);
+    atualizarContador(filtrados.length, itensPagina.length);
+    renderizarPaginacao(totalPaginas);
+  };
+
+  /* ==========================================================
+     Eventos: pesquisa, categoria e itens por página
+  ========================================================== */
 
   campoPesquisa.addEventListener("input", () => {
     estado.pesquisa = normalizarTexto(campoPesquisa.value.trim());
+    estado.paginaAtual = 1;
     atualizarLista();
   });
 
   botoesCategoria.forEach((botao) => {
     botao.addEventListener("click", () => {
       estado.categoria = botao.dataset.filtro || "todos";
+      estado.paginaAtual = 1;
       botoesCategoria.forEach((item) => item.classList.toggle("ativa", item === botao));
       atualizarLista();
     });
   });
+
+  if (seletorItensPorPagina) {
+    seletorItensPorPagina.value = String(estado.itensPorPagina);
+    seletorItensPorPagina.addEventListener("change", () => {
+      estado.itensPorPagina = seletorItensPorPagina.value;
+      estado.paginaAtual = 1;
+      atualizarLista();
+    });
+  }
 
   atualizarLista();
 };

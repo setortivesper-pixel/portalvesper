@@ -948,3 +948,130 @@ td:nth-child(2){
 
 /* Busca global da página inicial */
 .campo-pesquisa-geral { display:flex; align-items:center; width:min(500px,100%); padding:0 14px; border-radius:10px; background:#fff; box-shadow:0 0 10px rgb(0 0 0 / 8%); }.campo-pesquisa-geral > i { color:#64748b; }.campo-pesquisa-geral input { width:100%; max-width:none; padding-inline:12px; box-shadow:none; }.campo-pesquisa-geral kbd { padding:3px 6px; border:1px solid #cbd5e1; border-radius:4px; color:#64748b; font-size:.7rem; }.resultados-pesquisa { margin:-12px 0 30px; overflow:hidden; border:1px solid #bbf7d0; border-radius:16px; background:#fff; box-shadow:0 12px 28px rgb(15 23 42 / 10%); }.cabecalho-resultados { display:flex; align-items:center; justify-content:space-between; gap:16px; padding:16px 20px; border-bottom:1px solid #e2e8f0; background:#f0fdf4; }.cabecalho-resultados p { margin:0; color:#334155; font-weight:bold; }.cabecalho-resultados button { border:0; color:#059669; cursor:pointer; font:inherit; font-weight:bold; background:transparent; }.lista-resultados { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); }.resultado-item { display:flex; gap:14px; align-items:center; min-height:112px; padding:18px 20px; color:inherit; text-decoration:none; border-right:1px solid #e2e8f0; border-bottom:1px solid #e2e8f0; transition:background .2s; }.resultado-item:hover,.resultado-item:focus-visible { background:#ecfdf5; outline:0; }.resultado-icone { display:grid; flex:none; width:42px; height:42px; place-items:center; border-radius:12px; font-size:1.125rem; }.resultado-manual { color:#dc2626; background:#fef2f2; }.resultado-download { color:#059669; background:#ecfdf5; }.resultado-conteudo { display:grid; flex:1; gap:3px; min-width:0; }.resultado-conteudo strong { overflow:hidden; font-size:.95rem; text-overflow:ellipsis; white-space:nowrap; }.resultado-conteudo > span:last-child { overflow:hidden; color:#64748b; font-size:.8rem; text-overflow:ellipsis; white-space:nowrap; }.resultado-meta { color:#64748b; font-size:.75rem; font-weight:bold; text-transform:uppercase; }.resultado-seta { color:#94a3b8; font-size:.8rem; }.busca-vazia { grid-column:1 / -1; padding:24px; margin:0; color:#64748b; text-align:center; } @media (max-width:600px) { .campo-pesquisa-geral { width:100%; }.campo-pesquisa-geral kbd { display:none; }.resultados-pesquisa { margin-top:0; }.cabecalho-resultados { align-items:flex-start; flex-direction:column; }.lista-resultados { grid-template-columns:1fr; }.resultado-item { border-right:0; } }
+
+/*==========================
+      PAGINAÇÃO DE MANUAIS
+===========================*/
+
+.paginacao-container{
+
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+
+    margin-top:25px;
+
+}
+
+.paginacao-info{
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:12px;
+
+    color:#64748b;
+    font-size:14px;
+
+}
+
+.paginacao-select-label{
+
+    display:flex;
+    align-items:center;
+    gap:8px;
+
+    color:#64748b;
+    font-size:14px;
+
+}
+
+.paginacao-select-label select{
+
+    border:none;
+
+    padding:8px 14px;
+
+    border-radius:10px;
+
+    background:white;
+
+    cursor:pointer;
+
+    font-size:14px;
+
+    box-shadow:0 5px 12px rgba(0,0,0,.06);
+
+}
+
+.paginacao{
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:8px;
+
+}
+
+.paginacao button{
+
+    border:none;
+
+    min-width:40px;
+    height:40px;
+
+    padding:0 14px;
+
+    border-radius:10px;
+
+    background:white;
+
+    cursor:pointer;
+
+    font-size:14px;
+
+    transition:.2s;
+
+    box-shadow:0 5px 12px rgba(0,0,0,.06);
+
+}
+
+.paginacao button:hover:not(:disabled){
+
+    background:#059669;
+
+    color:white;
+
+}
+
+.paginacao button.paginacao-ativa{
+
+    background:#059669;
+
+    color:white;
+
+    font-weight:bold;
+
+}
+
+.paginacao button:disabled{
+
+    cursor:not-allowed;
+
+    opacity:.4;
+
+}
+
+.paginacao-reticencias{
+
+    color:#94a3b8;
+
+    padding:0 4px;
+
+}
+
+@media (max-width:600px) {
+    .paginacao-info { flex-direction:column; align-items:flex-start; }
+}

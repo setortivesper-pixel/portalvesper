@@ -31,6 +31,22 @@
     </nav>
 
     <section id="lista-manuais" class="lista-manuais" aria-label="Lista de manuais"></section>
+
+    <section class="paginacao-container" aria-label="Paginação de manuais">
+      <div class="paginacao-info">
+        <span id="contador-manuais"></span>
+        <label class="paginacao-select-label" for="itens-por-pagina">
+          Itens por página:
+          <select id="itens-por-pagina">
+            <option value="10">10</option>
+            <option value="20">20</option>
+            <option value="50">50</option>
+            <option value="todos">Todos</option>
+          </select>
+        </label>
+      </div>
+      <nav id="paginacao-manuais" class="paginacao" aria-label="Navegação de páginas"></nav>
+    </section>
   </main>
 
   <script src="js/layout.js"></script>
