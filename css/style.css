@@ -348,10 +348,11 @@ body{
     color:#49597c;
     margin-bottom:20px;
 }
+
 .menu-icon{
     width:25px;
     margin-right:10px;
-    color:#ffffff;
+    color:#1e293b;
     text-align:center;
 }
 
@@ -1074,4 +1075,8 @@ td:nth-child(2){
 
 @media (max-width:600px) {
     .paginacao-info { flex-direction:column; align-items:flex-start; }
+}
+
+.titulo-contatos-icon{
+    margin-right:0px;
 }
