@@ -36,8 +36,7 @@ if (sidebar) {
     <a class="brand" href="index.html" aria-label="Portal Vesper - in&iacute;cio">
       <img src="img/GVSPLogo.png" class="logo" alt="Vesper Transportes">
     </a>
-    <span class="menu-eyebrow">Menu principal</span>
-    <nav class="menu" aria-label="Navega&ccedil;&atilde;o principal">
+      <nav class="menu" aria-label="Navega&ccedil;&atilde;o principal">
       ${menuItems}
     </nav>
     <footer class="versao">

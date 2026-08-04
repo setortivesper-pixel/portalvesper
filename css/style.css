@@ -66,10 +66,12 @@ body{
 
 }
 
+/*Logo da side bar*/
 .logo{
     width:80px;
     display:block;
     margin:0 auto 40px auto;
+    padding-bottom: 20px;
 }
 /* Barra superior */
 
