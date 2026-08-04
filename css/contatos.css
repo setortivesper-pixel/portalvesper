@@ -31,9 +31,9 @@ html{
     box-shadow: 0 8px 18px rgba(37,99,235,.30);
 }
 
-.categoria.ativa:hover{
+/*.categoria.ativa:hover{
     background: var(--primary-dark);
-}
+}*/
 
 /* ===========================
    TABELA DE CONTATOS
