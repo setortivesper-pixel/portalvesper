@@ -1,6 +1,6 @@
 const navigationItems = [
   { href: "index.html", icon: "fa-house", label: "In&iacute;cio" },
-  { href: "manuais.html", icon: "fa-solid fa-book", label: "Manuais" },
+  { href: "manuais.html", icon: "fa-book", label: "Manuais" },
   { href: "downloads.html", icon: "fa-download", label: "Downloads" },
   { href: "contatos.html", icon: "fa-users", label: "Contatos" },
   {
@@ -9,7 +9,13 @@ const navigationItems = [
     label: "Abrir chamado",
     external: true,
   },
- ];
+  {
+    href: "https://docs.google.com/forms/d/e/1FAIpQLSclePi4p98n_6_5q0kDRiaIKilNBabF70FzvFHjVcnyM0G-OQ/viewform?usp=publish-editor",
+    icon: "fa-lightbulb",
+    label: "Sugerir Melhoria",
+    external: true,
+  },
+];
 
 const sidebar = document.querySelector(".sidebar");
 
