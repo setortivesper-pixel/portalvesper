@@ -22,18 +22,6 @@ html{
    TÍTULO DA PÁGINA
    (ícone dentro do h1, exclusivo de Contatos)
 =========================== */
-.titulo-pagina h1 i{
-    width: 44px;
-    height: 44px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-    border-radius: 12px;
-    font-size: 20px;
-}
-
 /* ===========================
    FILTROS DE CATEGORIA
    (destaque extra no estado ativo, além do já definido
