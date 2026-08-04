@@ -1,237 +1,40 @@
 <!doctype html>
 <html lang="pt-BR">
-
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>Manuais | Portal Vesper</title>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
-
-    <link rel="icon" type="image/png" href="img/faviconvesper.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Manuais | Portal Vesper</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="img/faviconvesper.png">
 </head>
-
 <body>
+  <aside class="sidebar" aria-label="Navegação principal"></aside>
 
-    <aside class="sidebar" aria-label="Navegação principal"></aside>
+  <main class="conteudo">
+    <header class="topo">
+      <label class="visually-hidden" for="pesquisa-manuais">Pesquisar manuais</label>
+      <input id="pesquisa-manuais" type="search" placeholder="Pesquisar manuais...">
+    </header>
 
-    <main class="conteudo">
+    <section class="titulo-pagina">
+      <h1><i class="fa-solid fa-book" aria-hidden="true"></i> Manuais</h1>
+      <p>Consulte os procedimentos internos da empresa.</p>
+    </section>
 
-        <header class="topo">
+    <nav class="categorias" aria-label="Categorias de manuais">
+      <button class="categoria ativa" type="button" data-filtro="todos">Todos</button>
+      <button class="categoria" type="button" data-filtro="rh">RH</button>
+      <button class="categoria" type="button" data-filtro="financeiro">Financeiro</button>
+      <button class="categoria" type="button" data-filtro="ti">TI</button>
+      <button class="categoria" type="button" data-filtro="operacional">Operacional</button>
+    </nav>
 
-            <label class="visually-hidden" for="pesquisa-manuais">
-                Pesquisar manuais
-            </label>
+    <section id="lista-manuais" class="lista-manuais" aria-label="Lista de manuais"></section>
+  </main>
 
-            <input
-                id="pesquisa-manuais"
-                type="search"
-                placeholder="Pesquisar manuais...">
-
-        </header>
-
-        <section class="titulo-pagina">
-
-            <h1>
-                <i class="fa-solid fa-book"></i>
-                Manuais
-            </h1>
-
-            <p>
-                Consulte os procedimentos internos da empresa.
-            </p>
-
-        </section>
-
-        <nav class="categorias" aria-label="Categorias de manuais">
-
-            <button
-                class="categoria ativa"
-                type="button"
-                data-filtro="todos">
-                Todos
-            </button>
-
-            <button
-                class="categoria"
-                type="button"
-                data-filtro="rh">
-                RH
-            </button>
-
-            <button
-                class="categoria"
-                type="button"
-                data-filtro="financeiro">
-                Financeiro
-            </button>
-
-            <button
-                class="categoria"
-                type="button"
-                data-filtro="ti">
-                TI
-            </button>
-
-            <button
-                class="categoria"
-                type="button"
-                data-filtro="operacional">
-                Operacional
-            </button>
-
-        </nav>
-
-        <section class="lista-manuais" aria-label="Lista de manuais">
-
-                      <a class="manual" href="#" target="_blank" rel="noopener">
-                <span class="manual-icone">
-                    <i class="fa-solid fa-file-pdf"></i>
-                </span>
-
-                <span class="manual-info">
-                    <strong>Acesso remoto VPN</strong>
-                    <span>Passo a passo para conectar na VPN da empresa.</span>
-                </span>
-
-                <span class="manual-categoria">TI</span>
-
-                <time class="manual-data" datetime="2026-07-20">20/07/2026</time>
-
-                <i class="fa-solid fa-chevron-right manual-seta"></i>
-            </a>
-
-            <a class="manual" href="#" target="_blank" rel="noopener">
-                <span class="manual-icone">
-                    <i class="fa-solid fa-file-pdf"></i>
-                </span>
-
-                <span class="manual-info">
-                    <strong>Cadastro de funcionário no relógio de ponto</strong>
-                    <span>Passo a passo para cadastro de funcionários com e sem digital.</span>
-                </span>
-
-                <span class="manual-categoria">RH</span>
-
-                <time class="manual-data" datetime="2026-07-29">29/07/2026</time>
-
-                <i class="fa-solid fa-chevron-right manual-seta"></i>
-            </a>
-
-            <a class="manual" href="https://drive.google.com/file/d/1T74uyVgjelNBi6IO8IwCOMtvf_OXnwu_/view?usp=sharing" target="_blank" rel="noopener">
-                <span class="manual-icone">
-                    <i class="fa-solid fa-file-pdf"></i>
-                </span>
-
-                <span class="manual-info">
-                    <strong>Início Rápido AnyDesk</strong>
-                    <span>Passo a passo para conectar no AnyDesk.</span>
-                </span>
-
-                <span class="manual-categoria">TI</span>
-
-                <time class="manual-data" datetime="2026-07-31">31/07/2026</time>
-
-                <i class="fa-solid fa-chevron-right manual-seta"></i>
-            </a>
-
-            <a class="manual" href="https://drive.google.com/file/d/186ewIY9P7qpKTO_tSmF3SCDUnFo1OyCp/view?usp=sharing" target="_blank" rel="noopener">
-                <span class="manual-icone">
-                    <i class="fa-solid fa-file-pdf"></i>
-                </span>
-
-                <span class="manual-info">
-                    <strong>Lightshot - Atalhos</strong>
-                    <span>Passo a passo para utilizar os atalhos do Lightshot.</span>
-                </span>
-
-                <span class="manual-categoria">TI</span>
-
-                <time class="manual-data" datetime="2026-07-31">31/07/2026</time>
-
-                <i class="fa-solid fa-chevron-right manual-seta"></i>
-            </a>
-
-            <!-- ========================= -->
-            <!-- OPERACIONAL -->
-            <!-- ========================= -->
-
-            <a class="manual" href="https://drive.google.com/file/d/1I_sNJJby9ypSxfjNlHCK4EnZ1j5VW54r/view?usp=drive_link" target="_blank" rel="noopener">
-                <span class="manual-icone">
-                    <i class="fa-solid fa-file-pdf"></i>
-                </span>
-
-                <span class="manual-info">
-                    <strong>Utilização do ABM Protege</strong>
-                    <span>Monitoramento de veículos, alertas, cercas, relatórios e trocas de garagem.</span>
-                </span>
-
-                <span class="manual-categoria">Operacional</span>
-
-                <time class="manual-data" datetime="2026-08-04">04/08/2026</time>
-
-                <i class="fa-solid fa-chevron-right manual-seta"></i>
-            </a>
-
-            <a class="manual" href="https://docs.google.com/document/d/1YUIFH5vAT_9Q17e4N8KSDPJNCwivl95o/edit?usp=drive_link&ouid=109244154480955470366&rtpof=true&sd=true" target="_blank" rel="noopener">
-                <span class="manual-icone">
-                    <i class="fa-solid fa-file-pdf"></i>
-                </span>
-
-                <span class="manual-info">
-                    <strong>Verificação de Wi-Fi</strong>
-                    <span>Procedimentos para diagnóstico, testes, troca de chip e roteadores dos veículos.</span>
-                </span>
-
-                <span class="manual-categoria">Operacional</span>
-
-                <time class="manual-data" datetime="2026-08-04">04/08/2026</time>
-
-                <i class="fa-solid fa-chevron-right manual-seta"></i>
-            </a>
-
-            <a class="manual" href="https://drive.google.com/file/d/16Rx0lceAjiQEAPGT-lKLLQTvoTBumsIy/view?usp=drive_link" target="_blank" rel="noopener">
-                <span class="manual-icone">
-                    <i class="fa-solid fa-file-pdf"></i>
-                </span>
-
-                <span class="manual-info">
-                    <strong>Troca de Veículos entre Garagens</strong>
-                    <span>Procedimento para transferência de veículos entre garagens e atualização dos sistemas.</span>
-                </span>
-
-                <span class="manual-categoria">Operacional</span>
-
-                <time class="manual-data" datetime="2026-08-04">04/08/2026</time>
-
-                <i class="fa-solid fa-chevron-right manual-seta"></i>
-            </a>
-
-            <a class="manual" href="https://drive.google.com/file/d/1aDan3n9aoLehOm8vNKMrXWaU_FqW14j6/view?usp=drive_link" target="_blank" rel="noopener">
-                <span class="manual-icone">
-                    <i class="fa-solid fa-file-pdf"></i>
-                </span>
-
-                <span class="manual-info">
-                    <strong>ABMControl</strong>
-                    <span>Procedimento para vincular motoristas aos veículos no sistema ABMControl.</span>
-                </span>
-
-                <span class="manual-categoria">Operacional</span>
-
-                <time class="manual-data" datetime="2026-08-04">04/08/2026</time>
-
-                <i class="fa-solid fa-chevron-right manual-seta"></i>
-            </a>
-                    </section>
-
-    </main>
-
-    <script src="js/layout.js"></script>
-    <script src="js/app.js"></script>
-
+  <script src="js/layout.js"></script>
+  <script src="js/manuais.js"></script>
+  <script src="js/app.js"></script>
 </body>
-
 </html>
