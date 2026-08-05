@@ -6,8 +6,7 @@
 window.portalData = window.portalData || {};
 
 window.portalData.manuais = [
-  { titulo: "Acesso remoto VPN", descricao: "Passo a passo para conectar na VPN da empresa.", categoria: "TI", departamento: "Tecnologia da Informação", data: "2026-07-20", arquivo: "#", palavrasChave: ["vpn", "acesso remoto", "ti"] },
-  { titulo: "Cadastro de funcionário", descricao: "Passo a passo para cadastro de funcionários com e sem digital no relógio de ponto.", categoria: "RH", departamento: "Recursos Humanos", data: "2026-07-29", arquivo: "#", palavrasChave: ["rh", "funcionário", "ponto", "digital"] },
+  { titulo: "Cadastro de funcionário", descricao: "Passo a passo para cadastro de funcionários com e sem digital no relógio de ponto.", categoria: "Recursos Humanos", departamento: "Recursos Humanos", data: "2026-07-29", arquivo: "#", palavrasChave: ["rh", "funcionário", "ponto", "digital"] },
   { titulo: "Início Rápido AnyDesk", descricao: "Passo a passo para conectar no AnyDesk.", categoria: "TI", departamento: "Tecnologia da Informação", data: "2026-07-31", arquivo: "https://drive.google.com/file/d/1T74uyVgjelNBi6IO8IwCOMtvf_OXnwu_/view?usp=sharing", palavrasChave: ["anydesk", "acesso remoto", "ti"] },
   { titulo: "Lightshot - Atalhos", descricao: "Passo a passo para utilizar os atalhos do Lightshot.", categoria: "TI", departamento: "Tecnologia da Informação", data: "2026-07-31", arquivo: "https://drive.google.com/file/d/186ewIY9P7qpKTO_tSmF3SCDUnFo1OyCp/view?usp=sharing", palavrasChave: ["lightshot", "atalhos", "captura de tela", "ti"] },
   { titulo: "Utilização do ABM Protege", descricao: "Monitoramento de veículos, alertas, cercas, relatórios e trocas de garagem.", categoria: "Operacional", departamento: "Operação", data: "2026-08-04", arquivo: "https://drive.google.com/file/d/1I_sNJJby9ypSxfjNlHCK4EnZ1j5VW54r/view?usp=drive_link", palavrasChave: ["abm", "protege", "veículos", "garagem", "operação"] },
