@@ -14,7 +14,7 @@ window.portalData.manuais = [
   { titulo: "Troca de Veículos entre Garagens", descricao: "Procedimento para transferência de veículos entre garagens e atualização dos sistemas.", categoria: "Operacional", departamento: "Operação", data: "2026-08-04", arquivo: "https://drive.google.com/file/d/16Rx0lceAjiQEAPGT-lKLLQTvoTBumsIy/view?usp=drive_link", palavrasChave: ["veículos", "garagens", "transferência", "operação"] },
   { titulo: "ABMControl", descricao: "Procedimento para vincular motoristas aos veículos no sistema ABMControl.", categoria: "Operacional", departamento: "Operação", data: "2026-08-04", arquivo: "https://drive.google.com/file/d/1aDan3n9aoLehOm8vNKMrXWaU_FqW14j6/view?usp=drive_link", palavrasChave: ["abmcontrol", "motoristas", "veículos", "operação"] },
   { titulo: "Envio de Eventos no eSocial", descricao: "Como enviar eventos e consultar seus protocolos de processamento.", categoria: "Recursos Humanos", departamento: "Recursos Humanos", data: "2026-08-05", arquivo: "https://drive.google.com/file/d/1EzHzOaj3xQYr5gIAWLo0pP6yP-KOasBC/view?usp=sharing", palavrasChave: ["esocial", "eventos", "protocolos", "rh", "Humanos"] },
-
+  { titulo: "Atualização do Sistema Humanos", descricao: "Procedimento para realizar a atualização do sistema Humanos com segurança.", categoria: "Recursos Humanos", departamento: "Recursos Humanos", data: "2026-08-05", arquivo: "https://drive.google.com/file/d/19mOqTgHFFDUzGVu5Ak0kJuQzJJHHSRBf/view?usp=sharing", palavrasChave: ["emil", "rh", "Humanos", "atualização"] },
 ];
 
 /* ==========================================================
