@@ -14,6 +14,8 @@ window.portalData.manuais = [
   { titulo: "Verificação de Wi-Fi", descricao: "Procedimentos para diagnóstico, testes, troca de chip e roteadores dos veículos.", categoria: "Operacional", departamento: "Operação", data: "2026-08-04", arquivo: "https://docs.google.com/document/d/1YUIFH5vAT_9Q17e4N8KSDPJNCwivl95o/edit?usp=drive_link&ouid=109244154480955470366&rtpof=true&sd=true", palavrasChave: ["wifi", "wi-fi", "chip", "roteador", "veículos"] },
   { titulo: "Troca de Veículos entre Garagens", descricao: "Procedimento para transferência de veículos entre garagens e atualização dos sistemas.", categoria: "Operacional", departamento: "Operação", data: "2026-08-04", arquivo: "https://drive.google.com/file/d/16Rx0lceAjiQEAPGT-lKLLQTvoTBumsIy/view?usp=drive_link", palavrasChave: ["veículos", "garagens", "transferência", "operação"] },
   { titulo: "ABMControl", descricao: "Procedimento para vincular motoristas aos veículos no sistema ABMControl.", categoria: "Operacional", departamento: "Operação", data: "2026-08-04", arquivo: "https://drive.google.com/file/d/1aDan3n9aoLehOm8vNKMrXWaU_FqW14j6/view?usp=drive_link", palavrasChave: ["abmcontrol", "motoristas", "veículos", "operação"] },
+  { titulo: "Envio de eventos e consulta de protocolos eSocial", descricao: "Como realizar o envio e verificar o retorno de eventos no eSocial.", categoria: "Recursos Humanos", departamento: "Recursos Humanos", data: "2026-08-05", arquivo: "https://drive.google.com/file/d/1EzHzOaj3xQYr5gIAWLo0pP6yP-KOasBC/view?usp=sharing", palavrasChave: ["esocial", "eventos", "protocolos", "rh", "Humanos"] },
+
 ];
 
 /* ==========================================================
