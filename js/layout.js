@@ -4,7 +4,7 @@ const navigationItems = [
   { href: "downloads.html", icon: "fa-download", label: "Downloads" },
   { href: "contatos.html", icon: "fa-users", label: "Contatos" },
   {
-    href: "https://docs.google.com/forms/d/e/1FAIpQLSf6FDbbCepjjwuYp5Xspb2bBjO5a2hNAEAKkRcPxEtlUfdWHg/viewform",
+    href: "https://docs.google.com/forms/d/e/1FAIpQLSdu_Fy3T8WwJEhrBtzwZtkszHQnvJlROd9Ii-frDnGXRZkDmA/viewform?usp=header",
     icon: "fa-headset",
     label: "Abrir chamado",
     external: true,
