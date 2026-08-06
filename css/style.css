@@ -27,6 +27,11 @@ body{
 
 }
 
+/* Sombra Botões */
+.categoria.ativa {
+    box-shadow: 0 8px 18px rgba(48, 70, 48, 0.3);
+}
+
 .sidebar h2{
 
     color:white;
