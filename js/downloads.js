@@ -167,6 +167,17 @@ window.portalData.downloads = [
     icone: { tipo: "favicon", dominioFavicon: "unimake.com.br", fallback: "fa-solid fa-file-invoice" },
     palavrasChave: ["uninfe", "nota fiscal", "nf-e", "ct-e", "financeiro"],
   },
+    {
+    titulo: "Dropbox",
+    descricao: "Plataforma para armazenamento, sincronização e compartilhamento de arquivos em nuvem.",
+    categoria: "TI",
+    departamento: "Tecnologia da Informaçã",
+    data: "2026-08-06",
+    arquivo: "https://www.dropbox.com/download?os=win&plat=win",
+    dominio: "dropbox.com",
+    icone: { tipo: "favicon", dominioFavicon: "dropbox.com", fallback: "fa-solid fa-file-invoice" },
+    palavrasChave: ["dropbox", "armazenamento", "sincronização", "compartilhamento", "ti"],
+  },
 ];
 
 /* ==========================================================
