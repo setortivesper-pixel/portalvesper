@@ -178,7 +178,31 @@ window.portalData.downloads = [
     icone: { tipo: "favicon", dominioFavicon: "dropbox.com", fallback: "fa-solid fa-file-invoice" },
     palavrasChave: ["dropbox", "armazenamento", "sincronização", "compartilhamento", "ti"],
   },
+    {
+    titulo: "Assinador Serpro",
+    descricao: "Programa usado para assinar documentos digitais com validade jurídica baseada nos padrões da ICP-Brasil.",
+    categoria: "Jurídico",
+    departamento: "Jurídico",
+    data: "2026-08-06",
+    arquivo: "https://artefatos-assinador.serpro.gov.br/downloads/4.5.3/Assinador-Serpro-4.5.3-x86_64.exe",
+    dominio: "serpro.gov.br",
+    icone: { tipo: "favicon", dominioFavicon: "serpro.gov.br", fallback: "fa-solid fa-landmark" },
+    palavrasChave: ["assinador", "Serpro", "assinar", "digital"],
+  },
+    {
+    titulo: "PJeOffice Pro",
+    descricao: "Assinador digital utilizado para acesso ao PJe e assinatura eletrônica de documentos.",
+    categoria: "Jurídico",
+    departamento: "Jurídico",
+    data: "2026-08-06",
+    arquivo: "https://pjeoffice.trf3.jus.br/pjeoffice-pro/docs/index.html?nocache=12.03.2024",
+    dominio: "cnj.jus.br",
+    icone: { tipo: "imagem", src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRezAjUtpo0XrziyPs4wVCef1LGOR4ISgJXUxPjz70QaQ&s" },
+    palavrasChave: ["pjeoffice", "pjeoffice pro", "pje", "assinador", "assinatura digital", "jurídico"],
+  },
+  
 ];
+
 
 /* ==========================================================
    Funções auxiliares
