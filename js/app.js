@@ -75,6 +75,50 @@ if (campoPesquisaGeral) {
 
   let conteudosPesquisaveis = [...obterManuaisParaBusca(), ...obterDownloadsParaBusca()];
 
+  const obterContatosParaBusca = async () => {
+    const resposta = await fetch("contatos.html");
+
+    if (!resposta.ok) {
+      throw new Error("Não foi possível carregar os contatos.");
+    }
+
+    const documentoContatos = new DOMParser().parseFromString(await resposta.text(), "text/html");
+
+    return [...documentoContatos.querySelectorAll(".tabela-contatos tbody tr")].map((linha) => {
+      const colunas = linha.querySelectorAll("td");
+      const setor = colunas[0]?.querySelector("strong")?.textContent.trim() || "Contato";
+      const descricao = colunas[0]?.querySelector("small")?.textContent.trim() || "";
+      const garagem = colunas[1]?.textContent.trim() || "";
+      const categoria = colunas[2]?.textContent.trim() || linha.dataset.categoria || "Contato";
+      const telefone = colunas[3]?.textContent.trim() || "";
+      const arquivo = colunas[4]?.querySelector("a")?.href || "contatos.html";
+
+      return {
+        tipo: "Contato",
+        icone: "fa-user",
+        titulo: setor,
+        descricao: [descricao, garagem, telefone].filter(Boolean).join(" · "),
+        categoria,
+        arquivo,
+        externo: arquivo !== "contatos.html",
+        palavrasChave: [linha.dataset.categoria || "", garagem, telefone],
+      };
+    });
+  };
+
+  const carregarContatosParaBusca = async () => {
+    try {
+      const contatos = await obterContatosParaBusca();
+      conteudosPesquisaveis = [...conteudosPesquisaveis, ...contatos];
+
+      if (campoPesquisaGeral.value.trim()) {
+        pesquisarNoPortal();
+      }
+    } catch {
+      // A busca principal continua disponível mesmo se a lista de contatos não puder ser carregada.
+    }
+  };
+
   const criarResultado = (item) => {
     const resultado = document.createElement("a");
     resultado.className = "resultado-item";
@@ -145,6 +189,7 @@ if (campoPesquisaGeral) {
     renderizarResultados(resultados, termo);
   };
 
+  void carregarContatosParaBusca();
   campoPesquisaGeral.addEventListener("input", pesquisarNoPortal);
   campoPesquisaGeral.addEventListener("keydown", (evento) => {
     if (evento.key === "Escape") {

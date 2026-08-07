@@ -1085,3 +1085,9 @@ td:nth-child(2){
 .titulo-contatos-icon{
     margin-right:0px;
 }
+
+/* Resultado de contato na busca global */
+.resultado-contato{
+    color:#04794f;
+    background:#ecfdf5;
+}
