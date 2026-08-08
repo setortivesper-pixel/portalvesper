@@ -42,13 +42,23 @@ if (campoPesquisaGeral) {
   const botaoLimparPesquisa = document.querySelector("#limpar-pesquisa");
 
   const downloadsPadrao = [
-    { titulo: "AnyDesk", descricao: "Acesso remoto para suporte de TI.", categoria: "Programa", arquivo: "https://anydesk.com/pt/downloads", externo: true },
+    { titulo: "AnyDesk", descricao: "Acesso remoto para suporte de TI.", categoria: "Programa", arquivo: "https://anydesk.com/pt/downloads/thank-you?dv=win_exe", externo: true },
     { titulo: "Google Chrome", descricao: "Navegador padrão homologado pela empresa.", categoria: "Programa", arquivo: "https://www.google.com/chrome/", externo: true },
-    { titulo: "Firefox", descricao: "Navegador alternativo homologado pela empresa.", categoria: "Programa", arquivo: "https://www.mozilla.org/pt-BR/firefox/new/", externo: true },
-    { titulo: "Adobe Reader", descricao: "Leitor de arquivos PDF.", categoria: "Programa", arquivo: "https://acrobat.adobe.com/br/pt/acrobat/pdf-reader.html", externo: true },
+    { titulo: "Firefox", descricao: "Navegador alternativo homologado pela empresa.", categoria: "Programa", arquivo: "https://www.firefox.com/pt-BR/thanks/?marketing_consent=1", externo: true },
+    { titulo: "Adobe Reader", descricao: "Leitor de arquivos PDF.", categoria: "Programa", arquivo: "https://get.adobe.com/br/reader/", externo: true },
     { titulo: "Foxit PDF Reader", descricao: "Leitor de PDF alternativo e leve.", categoria: "Programa", arquivo: "https://www.foxit.com/pdf-reader/", externo: true },
-    { titulo: "Spark", descricao: "Cliente de e-mail usado pela equipe.", categoria: "Programa", arquivo: "https://sparkmailapp.com/download", externo: true },
-    { titulo: "WhatsApp", descricao: "Aplicativo de mensagens para computador.", categoria: "Programa", arquivo: "https://www.whatsapp.com/download", externo: true },
+    { titulo: "Spark", descricao: "Cliente de e-mail usado pela equipe.", categoria: "Programa", arquivo: "https://www-igniterealtime-org.translate.goog/downloadServlet?filename=spark/spark_3_0_2-with-jre.exe&_x_tr_sl=en&_x_tr_tl=pt&_x_tr_hl=pt&_x_tr_pto=tc", externo: true },
+    { titulo: "WhatsApp", descricao: "Aplicativo de mensagens para computador.", categoria: "Programa", arquivo: "https://get.microsoft.com/installer/download/9NKSQGP7F2NH?cid=website_cta_psi", externo: true },
+    { titulo: "Lightshot", descricao: "Ferramenta para captura e edição rápida de telas.", categoria: "Programa", arquivo: "https://app.prntscr.com/build/setup-lightshot.exe", externo: true },
+    { titulo: "Extranet Fretamento", descricao: "Sistema utilizado para gerenciamento e consulta de informações de fretamento.", categoria: "Sistema", arquivo: "https://extranet.artesp.sp.gov.br/fretamento/instalacao/index.html", externo: true },
+    { titulo: "Java", descricao: "Plataforma necessária para execução de aplicações desenvolvidas em Java.", categoria: "Programa", arquivo: "https://javadl.oracle.com/webapps/download/AutoDL?BundleId=253458_ba687cb3cbb24342adc8fdf890b993dc", externo: true },
+    { titulo: "Itaú", descricao: "Sistema utilizado para acesso aos serviços bancários do Itaú.", categoria: "Sistema", arquivo: "https://guardiao.itau.com.br/UpdateServer/aplicativoitau.msi", externo: true },
+    { titulo: "SEFIP", descricao: "Sistema utilizado para geração e envio de informações relacionadas ao FGTS e à Previdência Social.", categoria: "Programa", arquivo: "https://www.caixa.gov.br/Downloads/fgts-sefip-grf/Sefip_v_8_4_20_12_2024.zip", externo: true },
+    { titulo: "WinRAR", descricao: "Programa para compactação e descompactação de arquivos.", categoria: "Programa", arquivo: "https://www.win-rar.com/postdownload.html?&L=9", externo: true },
+    { titulo: "UniNFe", descricao: "Sistema para emissão e gerenciamento de documentos fiscais eletrônicos.", categoria: "Programa", arquivo: "https://www.unimake.com.br/central-downloads", externo: true },
+    { titulo: "Dropbox", descricao: "Serviço para armazenamento, sincronização e compartilhamento de arquivos.", categoria: "Programa", arquivo: "https://www.dropbox.com/download?os=win&plat=win", externo: true },
+    { titulo: "Assinador Serpro", descricao: "Aplicativo para assinatura digital de documentos utilizando certificados digitais.", categoria: "Programa", arquivo: "https://artefatos-assinador.serpro.gov.br/downloads/4.5.3/Assinador-Serpro-4.5.3-x86_64.exe", externo: true },
+    { titulo: "PJeOffice Pro", descricao: "Aplicativo utilizado para acesso e autenticação em sistemas judiciais eletrônicos.", categoria: "Programa", arquivo: "https://pjeoffice.trf3.jus.br/pjeoffice-pro/docs/index.html?nocache=12.03.2024", externo: true },
   ];
 
   const normalizarTexto = (texto) => texto
