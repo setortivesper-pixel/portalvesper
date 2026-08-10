@@ -200,7 +200,17 @@ window.portalData.downloads = [
     icone: { tipo: "imagem", src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRezAjUtpo0XrziyPs4wVCef1LGOR4ISgJXUxPjz70QaQ&s" },
     palavrasChave: ["pjeoffice", "pjeoffice pro", "pje", "assinador", "assinatura digital", "jurídico"],
   },
-  
+  {
+    titulo: "PDF24",
+    descricao: "Ferramenta para criação, edição, conversão e organização de arquivos PDF.",
+    categoria: "Programa",
+    departamento: "Administrativo",
+    data: "2026-08-07",
+    arquivo: "https://tools.pdf24.org/pt/creator#download",
+    dominio: "pdf24.org",
+    icone: { tipo: "favicon", dominioFavicon: "pdf24.org" },
+    palavrasChave: ["pdf24", "pdf", "editor de pdf", "conversor pdf", "criar pdf", "editar pdf", "documentos"]
+  },
 ];
 
 

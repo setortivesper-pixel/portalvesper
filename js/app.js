@@ -59,6 +59,7 @@ if (campoPesquisaGeral) {
     { titulo: "Dropbox", descricao: "Serviço para armazenamento, sincronização e compartilhamento de arquivos.", categoria: "Programa", arquivo: "https://www.dropbox.com/download?os=win&plat=win", externo: true },
     { titulo: "Assinador Serpro", descricao: "Aplicativo para assinatura digital de documentos utilizando certificados digitais.", categoria: "Programa", arquivo: "https://artefatos-assinador.serpro.gov.br/downloads/4.5.3/Assinador-Serpro-4.5.3-x86_64.exe", externo: true },
     { titulo: "PJeOffice Pro", descricao: "Aplicativo utilizado para acesso e autenticação em sistemas judiciais eletrônicos.", categoria: "Programa", arquivo: "https://pjeoffice.trf3.jus.br/pjeoffice-pro/docs/index.html?nocache=12.03.2024", externo: true },
+    { titulo: "PDF24", descricao: "Ferramenta para criação, edição, conversão e organização de arquivos PDF.", categoria: "Programa", arquivo: "https://tools.pdf24.org/pt/creator#download", externo: true },
   ];
 
   const normalizarTexto = (texto) => texto
