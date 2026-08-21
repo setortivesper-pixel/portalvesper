@@ -67,16 +67,23 @@ if (campoPesquisaGeral) {
     .replace(/[\u0300-\u036f]/g, "")
     .toLocaleLowerCase("pt-BR");
 
-  const obterManuaisParaBusca = () => (window.portalData?.manuais || []).map((manual) => ({
-    tipo: "Manual",
-    icone: "fa-file-pdf",
-    titulo: manual.titulo,
-    descricao: manual.descricao,
-    categoria: manual.categoria,
-    arquivo: manual.arquivo,
-    externo: true,
-    palavrasChave: manual.palavrasChave,
-  }));
+  const obterManuaisParaBusca = () => (window.portalData?.manuais || []).map((manual) => {
+    // Detecta se o arquivo é HTML analisando a extensão no final da URL/caminho
+    // (aceita .html ou .htm, inclusive quando seguido de query string, ex: "?usp=sharing")
+    const ehHtml = /\.html?($|\?)/i.test(manual.arquivo);
+
+    return {
+      tipo: "Manual",
+      // Antes era fixo em "fa-file-pdf" para todo manual; agora varia conforme o tipo de arquivo
+      icone: ehHtml ? "fa-file-code" : "fa-file-pdf",
+      titulo: manual.titulo,
+      descricao: manual.descricao,
+      categoria: manual.categoria,
+      arquivo: manual.arquivo,
+      externo: true,
+      palavrasChave: manual.palavrasChave,
+    };
+  });
 
   const obterDownloadsParaBusca = () => downloadsPadrao.map((download) => ({
     tipo: "Download",
