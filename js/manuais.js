@@ -54,10 +54,15 @@ const criarCardManual = (manual) => {
 const icone = document.createElement("span");
 icone.className = "manual-icone";
 
-const tipoIcone = manual.tipo === "html"
-  ? "fa-file-code"
-  : "fa-file-pdf";
+// Detecta se o arquivo é HTML analisando a extensão no final da URL/caminho
+// (aceita .html ou .htm, inclusive quando seguido de query string, ex: "?usp=sharing")
+const ehHtml = /\.html?($|\?)/i.test(manual.arquivo);
 
+// Define qual ícone usar: arquivos HTML mostram "fa-file-code",
+// os demais (Drive/Docs, PDFs, etc.) mostram "fa-file-pdf"
+const tipoIcone = ehHtml ? "fa-file-code" : "fa-file-pdf";
+
+// Insere o ícone dentro do elemento
 icone.innerHTML = `<i class="fa-solid ${tipoIcone}" aria-hidden="true"></i>`;
 
   const informacoes = document.createElement("span");
