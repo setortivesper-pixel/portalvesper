@@ -61,7 +61,6 @@ if (campoPesquisaGeral) {
     { titulo: "PJeOffice Pro", descricao: "Aplicativo utilizado para acesso e autenticação em sistemas judiciais eletrônicos.", categoria: "Programa", arquivo: "https://pjeoffice.trf3.jus.br/pjeoffice-pro/docs/index.html?nocache=12.03.2024", externo: true },
     { titulo: "PDF24", descricao: "Ferramenta para criação, edição, conversão e organização de arquivos PDF.", categoria: "Programa", arquivo: "https://tools.pdf24.org/pt/creator#download", externo: true },
     { titulo: "Nome WhatsApp", descricao: "Ferramenta para registro automático de identificação de usuário.", categoria: "Extensão", arquivo: "https://chromewebstore.google.com/detail/nome-de-atendente-para-wh/nakomaepnfdjnbackfamckemcpphfcem?hl=pt-BR", externo: true },
-
   ];
 
   const normalizarTexto = (texto) => texto
