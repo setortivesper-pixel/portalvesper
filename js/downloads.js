@@ -211,6 +211,16 @@ window.portalData.downloads = [
     icone: { tipo: "favicon", dominioFavicon: "pdf24.org" },
     palavrasChave: ["pdf24", "pdf", "editor de pdf", "conversor pdf", "criar pdf", "editar pdf", "documentos"]
   },
+{
+  titulo: "Nome WhatsApp",
+  descricao: "Ferramenta para registro automático de identificação de usuário",
+  categoria: "Extensão",
+  departamento: "Administrativo",
+  data: "2026-08-27",
+  arquivo: "https://chromewebstore.google.com/detail/nome-de-atendente-para-wh/nakomaepnfdjnbackfamckemcpphfcem?hl=pt-BR",
+  icone: { tipo: "imagem", src: "img/ExteNome.png"  },
+  palavrasChave: ["whatsapp", "nome automático", "identificação de contato", "extensão", "contatos"]
+},
 ];
 
 
