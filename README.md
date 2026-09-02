@@ -1,9 +1,33 @@
 # 🚍 Portal Vesper
 
-> Plataforma corporativa desenvolvida para centralizar informações, ferramentas e recursos essenciais para os colaboradores da Vesper Transportes.
+> Plataforma corporativa desenvolvida para centralizar informações, ferramentas e recursos internos para os colaboradores da Vesper Transportes.
 
-O **Portal Vesper** é uma aplicação web criada com o objetivo de facilitar o acesso dos colaboradores a serviços e informações utilizadas no dia a dia. A plataforma reúne, em um único ambiente, recursos como abertura de chamados de TI, consulta a manuais e procedimentos, acesso a softwares corporativos e diretório de contatos, proporcionando uma experiência mais organizada, prática e acessível.
+O **Portal Vesper** é uma aplicação web criada para facilitar o acesso a recursos utilizados no dia a dia da empresa. A plataforma reúne funcionalidades como consulta de manuais, downloads de softwares, contatos internos e abertura de chamados, proporcionando uma experiência mais organizada, prática e acessível aos colaboradores.
 
-O projeto foi desenvolvido inicialmente utilizando **HTML, CSS e JavaScript**, com foco em uma interface intuitiva, responsiva e alinhada às necessidades do ambiente corporativo. Além de centralizar informações, o Portal Vesper busca reduzir dificuldades no acesso a recursos internos e melhorar a comunicação entre os colaboradores e o setor de Tecnologia da Informação.
+## 🎯 Objetivo
 
-🚀 O projeto também representa uma iniciativa prática de transformação digital interna, aplicando conceitos de **Desenvolvimento Front-end, UX/UI, organização de informações e soluções voltadas para problemas reais do ambiente corporativo**.
+Centralizar informações e ferramentas corporativas em uma única plataforma, facilitando o acesso dos colaboradores e otimizando a comunicação com o setor de Tecnologia da Informação.
+
+## ✨ Funcionalidades
+
+- 🛠️ Abertura de chamados
+- 📚 Consulta de manuais e procedimentos
+- 💻 Download de softwares
+- 📞 Diretório de contatos
+- 💡 Sugestões de melhoria
+
+## 🛠️ Tecnologias
+
+<div align="left">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="38" alt="HTML5"/>
+  &nbsp;&nbsp;
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="38" alt="CSS3"/>
+  &nbsp;&nbsp;
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="38" alt="JavaScript"/>
+  &nbsp;&nbsp;
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" width="38" alt="Bootstrap"/>
+</div>
+
+## 🚀 Evolução do Projeto
+
+O Portal Vesper está em constante evolução, com a proposta de incorporar novas funcionalidades e ferramentas voltadas às necessidades dos diferentes setores da empresa, consolidando-se como um ambiente centralizado de recursos corporativos.
