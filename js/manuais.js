@@ -23,7 +23,9 @@ window.portalData.manuais = [
   { titulo: "Tratativas de Multas", descricao: "Procedimentos para tratamento de multas.", categoria: "Sinistros", departamento: "Sinistros", data: "2026-07-29", arquivo: "https://docs.google.com/document/d/10eSpRwrahftr8df-IahafdDOGExpO3JW/edit?usp=sharing&ouid=111553798159595339439&rtpof=true&sd=true", palavrasChave: ["sinistros", "multa", "acidente", "advertência","motorista"] },
   { titulo: "Checklist de Tratativa de Sinistros", descricao: "Garantir que toda a documentação necessária para a tratativa de um sinistro seja conferida e organizada.", categoria: "Sinistros", departamento: "Sinistros", data: "2026-07-29", arquivo: "https://docs.google.com/document/d/18unG4CBFbcDbc5LWQjVc7AYYCnV7CtY6/edit?usp=sharing&ouid=111553798159595339439&rtpof=true&sd=true", palavrasChave: ["documentos", "multas", "sinistros", "motorista"] },
   { titulo: "Guia de Erros do eSocial", descricao: "Esse guia tem como objetivo centralizar as informações referentes aos eventos do eSocial, possiveis erros e resoluções.", categoria: "Recursos Humanos", departamento: "Recursos Humanos", data: "2026-08-21", arquivo: "eSocial.html", palavrasChave: ["erros", "esocial", "verificação", "eventos", "erro", "problem esocial"]},
-  { titulo: "Nome WhatsApp Automático", descricao: "Este manual trata a instalação e configuração da extensão de nome automático para o WhatsApp", categoria: "Operacional", departamento: "Operação", data: "2026-08-27", arquivo: "https://drive.google.com/file/d/1OKY2KtQoIAW3oqsiSBoYGtZGx-7OoJVj/view?usp=sharing", palavrasChave: ["Nome", "Automático", "WhatsApp"]}
+  { titulo: "Nome WhatsApp Automático", descricao: "Este manual trata a instalação e configuração da extensão de nome automático para o WhatsApp", categoria: "Operacional", departamento: "Operação", data: "2026-08-27", arquivo: "https://drive.google.com/file/d/1OKY2KtQoIAW3oqsiSBoYGtZGx-7OoJVj/view?usp=sharing", palavrasChave: ["Nome", "Automático", "WhatsApp"]},
+  {titulo:"Alinhamento RH e Segurança do Trabalho",descricao:"Procedimentos entre RH e Segurança do Trabalho para admissões, demissões, exames ocupacionais e integrações.",categoria:"Segurança do Trabalho",departamento:"Segurança do Trabalho",data:"2026-09-20",arquivo:"https://drive.google.com/file/d/1udkHCKbvtUzeW2WfkePNhYepuPfIbMCQ/view?usp=sharing",palavrasChave:["segurança do trabalho","rh","admissão","demissão","exames","integração","aso","pcmsO","ppp"]},
+  {titulo:"Acidente de Trabalho (Funcionários)",descricao:"Procedimentos para atendimento, comunicação, registro da ocorrência e abertura da CAT em caso de acidente de trabalho.",categoria:"Segurança do Trabalho",departamento:"Segurança do Trabalho",data:"2026-09-20",arquivo:"https://drive.google.com/file/d/10hEDV-euF525sr5WZ4KWTYMDzZi5d6Di/view?usp=sharing",palavrasChave:["segurança do trabalho","acidente de trabalho","funcionário","cat","atendimento","técnico de segurança"]},
 ];
 
 /* ==========================================================
@@ -249,7 +251,7 @@ const iniciarPaginaManuais = () => {
 
   botoesCategoria.forEach((botao) => {
     botao.addEventListener("click", () => {
-      estado.categoria = botao.dataset.filtro || "todos";
+      estado.categoria = normalizarTexto(botao.dataset.filtro || "todos");
       estado.paginaAtual = 1;
       botoesCategoria.forEach((item) => item.classList.toggle("ativa", item === botao));
       atualizarLista();
